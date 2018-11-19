@@ -1,0 +1,2 @@
+//省级
+var provs_data = [{"text":"\u9655\u897f\u7701","value":"610000"}],citys_data = {"610000":[{"text":"\u897f\u5b89\u5e02","value":"610100"},{"text":"\u94dc\u5ddd\u5e02","value":"610200"},{"text":"\u5b9d\u9e21\u5e02","value":"610300"},{"text":"\u54b8\u9633\u5e02","value":"610400"},{"text":"\u6e2d\u5357\u5e02","value":"610500"},{"text":"\u5ef6\u5b89\u5e02","value":"610600"},{"text":"\u6c49\u4e2d\u5e02","value":"610700"},{"text":"\u6986\u6797\u5e02","value":"610800"},{"text":"\u5b89\u5eb7\u5e02","value":"610900"},{"text":"\u5546\u6d1b\u5e02","value":"611000"}]};

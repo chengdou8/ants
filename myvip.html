@@ -1,0 +1,175 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>我的vip会员</title>
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <!-- <link rel="stylesheet" type="text/css" href="./css/aui.css" /> -->
+    <style>
+    body {padding: 0; margin:0; color: #333;}
+    ul,li {margin: 0; padding: 0; list-style: normal;}
+    @font-face {
+  		font-family:'namefont';
+  		src: url(PingFang Heavy.ttf);
+  	}
+    .vip-cards,.vip-bonus {padding: 0.5rem 0.75rem;}
+    .vip-freedom {padding: 0.85rem 0.75rem;}
+    .vip-card {position: relative; z-index: 5; width: 100%; height: 11.2rem;margin-top: -5.3rem; background-color: #e3c48e;background: -moz-linear-gradient(left, #d7b377, #efd4a3);background: -webkit-linear-gradient(left, #d7b377, #efd4a3);background: -o-linear-gradient(left, #d7b377, #efd4a3); border-radius: 12px;-webkit-box-shadow:0 2px 8px #ddd; box-shadow: 0 2px 8px #ddd;}
+    .vip-black {background-color: #212121; height: 5.8rem; position: relative; z-index: 1;}
+    .vip-black .black-left,.vip-black .black-right {background-color: #212121; position: absolute; top: 70px; width: 30px;height: 30px;}
+    .vip-black .black-left {transform: rotate(35deg); left: 0;}
+    .vip-black .black-right {transform: rotate(325deg); right: 0;}
+    .rightImg {position: absolute; top: 0; right: 0;}
+    .rightImg img {height: 22px;}
+    .vip-info {padding: 15px 20px; overflow: hidden;}
+    .vip-head {float: left; width: 58px;height: 58px;background-color: #fff;border-radius: 50%;border: 1px solid #edd19e;}
+    .vip-head img {width: 100%; height: 100%; border-radius: 50%;}
+    .vip-profile {margin-left: 75px; color: #fff;}
+    .vip-name {padding-top: 5px;}
+    .infoname {float: left; font-family: "namefont"; font-size: 17px;  font-weight: 600;}
+    .vip-name img {height: 25px; padding: 2px 0 0 5px;}
+    .usetime { font-size: 14px;}
+    .progress {position: relative; width: 120px; height: 7px; background-color: #ceae76; margin: 42px 25px 25px;}
+    .card-boot {display: flex;-webkit-justify-content: space-between; justify-content: space-between; font-size: 14px; color: #855920;}
+    .prosV1 {position: absolute; left: -25px; top: -3px; height: 13px;}
+    .prosV2 {position: absolute; right: -25px; top: -3px; height: 13px;}
+    .progress-bar {position: absolute; left: -8px; top: -20px;padding: 0 5px; background-color: #e6cea5; border-radius: 5px; color: #895e25; font-size: 12px; line-height: 14px;}
+    .progress-bar .line {position: absolute; left: 8px; top: 14px; width: 1px; height: 8px; background-color: #e6cea5;}
+    .growth {position: absolute; top: -6px; left: 150px; color: #fff; font-size: 13px;width: 105px;}
+    .cart-btn {border:1px solid #8a6026; border-radius: 10px; padding: 3px 8px; font-size: 12px; color: #855920; margin-top: -3px;}
+    .vip-bonus {border-bottom: 1px solid #efefef;}
+    .bonus-item {position: relative;overflow: hidden; text-align: center; font-size: 16px;}
+    .bonus-item .line {position: absolute; left: 50%; top: 32%;width: 1px; height: 45px; background-color: #efefef;}
+    .bonus-box {width: 50%; float: left; line-height: 1.5rem; padding-top: 15px;}
+    .vip-bonus .bonus-item:nth-child(2) {border-bottom: 1px solid #efefef; padding-bottom: 15px;}
+    .bonus-txt1 {font-size: 15px;}
+    .bonus-txt2,.bonus-txt4,.bonus-txt3,.unit {font-size: 12px;}
+    .bonus-txt2 .total {font-size: 23px; font-weight: bold;}
+    .bonus-item .bonus-txt5 {font-size: 13px; float: left;padding: 5px 0;}
+    .bonus-item .bonus-txt5:last-child {float: right;}
+    .cash-btn {font-size: 12px; padding: 2px 8px; background-color: #e4c27f;background: -moz-linear-gradient(left, #cea261, #f7be67);background: -webkit-linear-gradient(left, #cea261, #f7be67);background: -o-linear-gradient(left, #cea261, #f7be67); border-radius: 12px;}
+    .freedom-item {display: flex;-webkit-justify-content: space-between; justify-content: space-between;}
+    .freedomTitle {position: relative; width: 100px; height: 1px; background-color: #dcdcdc; margin: 25px auto; text-align: center;font-size: 15px;color: #999;}
+    .freedomTitle span {position: absolute;left: 15px; top: -10px; background-color: #fff; width: 70px;}
+    .freeIcon {width: 32px; height: 32px; padding: 12px; background-color: #f6f6f6; border-radius: 50%;}
+    .freeIcon img {width: 32px;}
+    .freedom-t {text-align: center; font-size: 15px; color: #777; padding: 5px 0;}
+    .freedom-profit {padding: 0 5px;}
+    .freedom-profit .freeIcon {float: left;}
+    .freedom-profit .freeTxt {margin-left: 80px; color: #777; padding: 10px 0; font-size: 15px; text-align: center;}
+    .freedom-box {padding:0 5px;}
+    .freedom-btn {background-color: #ceae76; font-size: 13px; color: #fff; padding: 2px 10px; border-radius: 8px; margin-top: 5px; display: block;}
+  </style>
+</head>
+<body>
+<div class="vip-content">
+  <div class="vip-black"><span class="black-left"></span><span class="black-right"></span></div>
+  <div class="vip-cards">
+    <div class="vip-card">
+      <span class="rightImg"><img src="image/vip/vip_card.png"/></span>
+      <div class="vip-info">
+        <div class="vip-head"><img src="https://gss0.bdstatic.com/94o3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike92%2C5%2C5%2C92%2C30/sign=44caad4930fa828bc52e95b19c762a51/a08b87d6277f9e2ffffc34441c30e924b999f3b5.jpg" /></div>
+        <div class="vip-profile">
+          <div class="vip-name">
+            <span class="infoname">我是小仙女</span>
+            <img src="image/vip/current_v1.png" />
+          </div>
+          <div class="usetime">已用386天</div>
+        </div>
+
+        <div class="progress">
+          <span class="progress-bar">0<span class="line"></span></span>
+          <img src="image/vip/v1.png" class="prosV1" />
+          <img src="image/vip/v2.png" class="prosV2"/>
+          <span class="growth">成长值 0/300</span>
+        </div>
+
+        <div class="card-boot">
+          <span class="open-time">开通时间：01/27/2018</span>
+          <span class="cart-btn">已开通</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="vip-bonus">
+    <b>邀请红利</b>
+    <div class="bonus-item">
+      <div class="bonus-box">
+        <div class="bonus-txt1">一级VIP会员数</div>
+        <div class="bonus-txt2"><span class="total">569</span>（人）</div>
+        <div class="bonus-txt3">红利金额：233.00<span class="unit">（元）</span></div>
+        <div class="bonus-txt4">VIP会员总数：938<span class="unit">（人）</span></div>
+      </div>
+      <div class="bonus-box">
+        <div class="bonus-txt1">二级VIP会员数</div>
+        <div class="bonus-txt2"><span class="total">369</span>（人）</div>
+        <div class="bonus-txt3">红利金额：233.00<span class="unit">（元）</span></div>
+        <div class="bonus-txt4">VIP红利总额：6689.20<span class="unit">（人）</span></div>
+      </div>
+      <span class="line"></line>
+    </div>
+    <div class="bonus-item">
+      <div class="bonus-box">
+        <div class="bonus-txt1">一级普通会员数</div>
+        <div class="bonus-txt2"><span class="total">569</span>（人）</div>
+        <div class="bonus-txt3">红利金额：233.00<span class="unit">（元）</span></div>
+        <div class="bonus-txt4">普通会员总数：938<span class="unit">（人）</span></div>
+      </div>
+      <div class="bonus-box">
+        <div class="bonus-txt1">二级普通会员数</div>
+        <div class="bonus-txt2"><span class="total">369</span>（人）</div>
+        <div class="bonus-txt3">红利金额：233.00<span class="unit">（元）</span></div>
+        <div class="bonus-txt4">普通红利总额：6689.20<span class="unit">（人）</span></div>
+      </div>
+      <span class="line"></line>
+    </div>
+    <div class="bonus-item">
+        <div class="bonus-txt5">会员总数：938<span class="unit">（人）</span></div>
+        <div class="bonus-txt5">红利总额：6689.20<span class="unit">（元）</span><span class="cash-btn">去提现</span></div>
+    </div>
+  </div>
+
+  <div class="vip-freedom">
+    <b>您所享受的所有会员特权</b>
+    <div class="freedomTitle"><span>赚钱特权</span></div>
+    <div class="freedom-item">
+      <div class="freedom-profit">
+        <div class="freeIcon"><img src="image/vip/pl_1.png" /></div>
+        <div class="freeTxt">
+          <div class="">开店赚钱</div>
+          <span class="freedom-btn">去开店</span>
+        </div>
+      </div>
+      <div class="freedom-profit">
+        <div class="freeIcon"><img src="image/vip/pl_2.png" /></div>
+        <div class="freeTxt">
+          <div class="">拓展赚钱</div>
+          <span class="freedom-btn">邀请好友</span>
+        </div>
+      </div>
+    </div>
+    <div class="freedomTitle"><span>身份特权</span></div>
+    <div class="freedom-item">
+      <div class="freedom-box">
+        <div class="freeIcon"><img src="image/vip/pl_3.png" /></div>
+        <div class="freedom-t">尊贵标识</div>
+      </div>
+      <div class="freedom-box">
+        <div class="freeIcon"><img src="image/vip/pl_4.png" /></div>
+        <div class="freedom-t">签到有礼</div>
+      </div>
+      <div class="freedom-box">
+        <div class="freeIcon"><img src="image/vip/pl_5.png" /></div>
+        <div class="freedom-t">专属活动</div>
+      </div>
+      <div class="freedom-box">
+        <div class="freeIcon"><img src="image/vip/pl_6.png" /></div>
+        <div class="freedom-t">生日祝福</div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

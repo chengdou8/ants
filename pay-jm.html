@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>蚂蚁之家</title>
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <!-- <link rel="stylesheet" type="text/css" href="./css/aui.css" /> -->
+    <style>
+    ul,li {margin: 0; padding: 0; list-style: normal;}
+    .aui-mask {position: fixed;width: 100%;height: 100%;top: 0;left: 0;background: rgba(0, 0, 0, 0.3);opacity: 0;z-index: 8;visibility: hidden;-webkit-transition: opacity .3s,-webkit-transform .3s;transition: opacity .3s,transform .3s;}
+    .aui-mask.aui-mask-in {visibility: visible; opacity: 1;}
+    .aui-actionsheet {width: 100%;position: fixed;bottom: 0;left: 0;padding: 0;z-index: 999;opacity: 0;-webkit-transition: opacity .3s,-webkit-transform .3s;transition: opacity .3s,transform .3s;-webkit-transform: translate3d(0,100%,0);transform: translate3d(0,100%,0);}
+    .aui-actionsheet-in {background-color: #fff;opacity:1; transform: translate3d(0,0,0); z-index: 10002;}
+    .aui-actionsheet-title {font-size: 15px; color: #222;line-height: 2.48rem; border-bottom: 1px solid #f0f0f0; text-align: center; position: relative;}
+    .aui-icon-close {font-family: serif;font-size: 20px; color: #757575;position: absolute; top: 1px; left: .75rem;}
+    .vipRaiders {position: absolute;right: .75rem;font-size: 13px;color: #00BFFF;}
+    .aui-total {padding: .5rem 0; text-align: center; font-size: 2rem;}
+    .aui-payment {padding: 1.2rem 0 0 0;}
+    .aui-payment-list .aui-list-item {position: relative; padding: 10px 0.75rem;border-bottom: 1px solid #efefef;display: flex;-webkit-justify-content: space-between; justify-content: space-between;}
+    .aui-list-item-inner {font-size: 15px; color: #555;}
+    .aui-list-item-right {font-size: 15px;}
+    .pay-list {display: flex;-webkit-justify-content: space-between; justify-content: space-between;padding: .8rem 1rem .3rem;}
+    .pay-list .pay-item {display: block; background-color: #fff; padding: 0 6px; color: #333; border: 1px solid #ddd; border-radius: 12px; line-height: 1.35rem; font-size: 12px;}
+    .aui-payment-list .paybox {display: block;}
+    .aui-btn {position: relative;display: inline-block;font-size: 17px;font-weight: 400;font-family: inherit;text-decoration: none;text-align: center;margin: 0;background: #dddddd;padding: 0 0.6rem;height: 2.5rem;line-height: 2.5rem; border: none;white-space: nowrap;text-overflow: ellipsis;vertical-align: middle;-webkit-box-sizing: border-box;box-sizing: border-box;-webkit-user-select: none;user-select: none;}
+    .aui-btn-info {color: #ffffff !important;background-color: #03a9f4 !important;}
+    .aui-btn-block {width: 100%;}
+  </style>
+</head>
+<body>
+<div class="aui-mask aui-mask-in" id="mask" tapmode onclick="closeActionsheet()"></div>
+<div class="aui-actionsheet aui-actionsheet-in" id="actionsheet">
+  <div class="aui-sheetBox">
+    <div class="aui-actionsheet-content sheet-in" id="confirmPayment">
+      <div class="aui-actionsheet-title">
+        <span class="aui-iconfont aui-icon-close" tapmode onclick="closeActionsheet()">×</span>VIP注册支付<a class="vipRaiders" onclick="">vip攻略</a>
+      </div>
+
+      <div class="aui-total">¥99.00</div>
+      <ul class="aui-payment-list">
+          <li class="aui-list-item">
+              <div class="aui-list-item-inner">绑定账号</div>
+              <div class="aui-list-item-right">15129097823</div>
+          </li>
+          <li class="aui-list-item paybox">
+              <div class="aui-list-item-inner">支付方式</div>
+
+              <div class="pay-list">
+                <a class="pay-item active">微信支付</a><a class="pay-item">支付宝支付</a><a class="pay-item">银联支付</a>
+              </div>
+            </label>
+          </li>
+      </ul>
+      <div class="aui-btn-group aui-payment">
+        <button type="button" onclick="payment(type)" class="aui-btn aui-btn-block aui-btn-info">立即付款</button>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

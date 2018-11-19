@@ -1,0 +1,77 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>蚂蚁之家</title>
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <!-- <link rel="stylesheet" type="text/css" href="./css/aui.css" /> -->
+    <style>
+    ul,li {margin: 0; padding: 0; list-style: normal;}
+    .aui-mask {position: fixed;width: 100%;height: 100%;top: 0;left: 0;background: rgba(0, 0, 0, 0.3);opacity: 0;z-index: 8;visibility: hidden;-webkit-transition: opacity .3s,-webkit-transform .3s;transition: opacity .3s,transform .3s;}
+    .aui-mask.aui-mask-in {visibility: visible; opacity: 1;}
+    .aui-actionsheet {width: 100%;position: fixed;bottom: 0;left: 0;padding: 0;z-index: 999;opacity: 0;-webkit-transition: opacity .3s,-webkit-transform .3s;transition: opacity .3s,transform .3s;-webkit-transform: translate3d(0,100%,0);transform: translate3d(0,100%,0);}
+    .aui-actionsheet-in {background-color: #fff;opacity:1; transform: translate3d(0,0,0); z-index: 10002;}
+    .aui-actionsheet-title {font-size: 1.2rem; color: #222;line-height: 2.48rem; border-bottom: 1px solid #ddd; text-align: center; position: relative;background-color: #f9f9f9;}
+    .aui-icon-close {font-family: serif;font-size: 1.8rem; color: #757575;position: absolute; top: 1px; left: .75rem;}
+    .aui-actionsheet-item {position: relative;padding: .5rem .75rem; display: flex; -webkit-justify-content: space-between; justify-content: space-between;border-bottom: 1px solid #efefef;}
+    .aui-total {font-size: 1.2rem; color: #f65455;position: absolute; right: .75rem; top: .25rem;}
+    .aui-payment {padding: .75rem;}
+    .aui-payment-list .aui-list-item {position: relative;padding: 10px 0; margin-left: .75rem; padding-right: 1.25rem;border-bottom: 1px solid #efefef;}
+    .aui-list-item i {display: block; height: 24px; width: 30px;}
+    .aui-list-item-inner {display: flex;}
+    .aui-icon-wechat {background: url(image/icon-wechat.png) no-repeat; background-size: 24px;}
+    .aui-icon-alipay {background: url(image/icon-alipay.png) no-repeat; background-size: 24px;}
+    .aui-icon-card {background: url(image/icon-bank.png) no-repeat; background-size: 24px;}
+    .aui-icon-wechat::before {display: none;}
+    .aui-payment-list .aui-list-item label {display: flex; justify-content: space-between; width: 100%;}
+    .aui-btn {position: relative;display: inline-block;font-size: 0.85rem;font-weight: 400;font-family: inherit;text-decoration: none;text-align: center;margin: 0;background: #dddddd;padding: 0 0.6rem;height: 2rem;line-height: 2rem; border: none;border-radius: 0.2rem;white-space: nowrap;text-overflow: ellipsis;vertical-align: middle;-webkit-box-sizing: border-box;box-sizing: border-box;-webkit-user-select: none;user-select: none;}
+    .aui-btn-info {color: #ffffff !important;background-color: #03a9f4 !important;}
+    .aui-btn-block {width: 100%;}
+    .aui-radio {width: 1.2rem;height: 1.2rem;background-color: #ffffff;border: solid 1px #dddddd;-webkit-border-radius: 0.6rem;border-radius: 0.6rem;font-size: 0.8rem;margin: 0;padding: 0;position: relative;display: inline-block;vertical-align: top;cursor: default;-webkit-appearance: none;-webkit-user-select: none;user-select: none;-webkit-transition: background-color ease 0.1s;transition: background-color ease 0.1s;}
+    .aui-radio:checked {background-color: #03a9f4; border: solid 1px #03a9f4; text-align: center; background-clip: padding-box;}
+    .aui-radio:checked:after, .aui-radio.aui-checked:after {content: '';width: 0.5rem;height: 0.3rem;position: absolute;top: 50%;left: 50%;margin-left: -0.25rem;margin-top: -0.25rem;background: transparent;border: 1px solid #ffffff;border-top: none;border-right: none;z-index: 2;-webkit-border-radius: 0;border-radius: 0;-webkit-transform: rotate(-45deg);transform: rotate(-45deg);}
+    .aui-radio:checked:before, .aui-radio.aui-checked:before, .aui-radio:checked:after, .aui-radio.aui-checked:after {content: '';width: 0.5rem;height: 0.3rem;position: absolute;top: 50%;left: 50%;margin-left: -0.25rem;margin-top: -0.25rem;background: transparent;border: 1px solid #ffffff;border-top: none;border-right: none;z-index: 2;-webkit-border-radius: 0;border-radius: 0;-webkit-transform: rotate(-45deg);transform: rotate(-45deg);}
+  </style>
+</head>
+<body>
+<div class="aui-mask aui-mask-in" id="mask" tapmode onclick="closeActionsheet()"></div>
+<div class="aui-actionsheet aui-actionsheet-in" id="actionsheet">
+  <div class="aui-sheetBox">
+    <div class="aui-actionsheet-content sheet-in" id="confirmPayment">
+      <div class="aui-actionsheet-title">
+        <span class="aui-iconfont aui-icon-close" tapmode onclick="closeActionsheet()">×</span>VIP注册支付
+      </div>
+      <div class="aui-actionsheet-item">
+        <div>支付金额（元）</div>
+        <div class="aui-total">¥ 0.01</div>
+      </div>
+
+      <ul class="aui-payment-list">
+          <li class="aui-list-item">
+            <label>
+              <div class="aui-list-item-inner"><i class="aui-icon-wechat"></i><span>微信支付</span></div>
+              <div class="aui-list-item-right"><input type="radio" name="bank" value="wxpay" checked class="aui-radio"></div>
+            </label>
+          </li>
+          <li class="aui-list-item">
+            <label>
+              <div class="aui-list-item-inner"><i class="aui-icon-alipay"></i><span>支付宝支付</span></div>
+              <div class="aui-list-item-right"><input type="radio" name="bank" value="alipay" class="aui-radio"></div>
+            </label>
+          </li>
+          <li class="aui-list-item">
+            <label>
+              <div class="aui-list-item-inner"><img src="./image/icon-bank.png" style="width:24px; height:24px;margin-right:6px;"/><span>银联支付</span><span>尾号6012</span></div>
+              <div class="aui-list-item-right"><input type="radio" name="bank" value="unionpay" class="aui-radio"></div>
+            </label>
+          </li>
+      </ul>
+      <div class="aui-btn-group aui-payment">
+        <button type="button" onclick="payment(type)" class="aui-btn aui-btn-block aui-btn-info">立即付款</button>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

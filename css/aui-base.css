@@ -1,0 +1,154 @@
+body {
+  background-color: #f5f5f5;
+}
+a {
+  color: #03a9f4;
+}
+.aui-tab-item.aui-active {
+  color: #03a9f4;
+}
+.aui-content {
+	padding-bottom:50px;
+}
+.aui-relative {
+  position: relative;
+}
+.aui-box-shadow {
+  -webkit-box-shadow:0 2px 2px rgba(204,204,204,0.3);
+  box-shadow:0 2px 2px rgba(204,204,204,0.3);
+}
+/* .aui-bar-nav {
+  background-color:#1983d1;
+} */
+.transparent {
+  background: transparent;
+}
+.aui-searchbar-input {
+  border-radius: 0.65rem;
+}
+.aui-searchbar .navbar .nav-wrap-left {
+  height: 1.01rem;
+  line-height: 1.01rem;
+}
+.aui-icon-search {
+    background: url(../image/icon_search.png) no-repeat;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background-size: 16px 16px;
+    position: relative;
+    left: 0;
+    top: 7px;
+    vertical-align: middle;
+    float: left;
+    margin-right: 7PX;
+}
+.aui-icon-search::before {
+   display: none;
+}
+.aui-wechat-top {
+  padding: 10px 15px;
+  overflow: hidden;
+}
+.aui-wechat-title {
+  padding-left: 8px;
+  border-left: 2px solid #0082d2;
+}
+.aui-primary {
+  color: #0082d2;
+}
+.aui-right {
+  float: right;
+  font-size:.625rem;
+  padding-top:4px;
+}
+.aui-grey {
+  color: #757575;
+}
+.aui-red {
+  color: #f65455;
+}
+.aui-slide-page-dot {
+  background-color: #936a55;
+}
+.aui-slide-page-active {
+  background-color: #fff;
+}
+.aui-slide-page-wrap {z-index: 7;}
+/* footer */
+.aui-bar-tab {
+  -webkit-box-shadow:0 -2px 2px rgba(204,204,204,0.3);
+  box-shadow:0 -2px 2px rgba(204,204,204,0.3);
+  z-index: 10000;
+}
+.aui-bar-tab .aui-active {
+  color: #0082d2;
+}
+.aui-bar-tab .aui-bar-tab-item i {
+  width: 1rem;
+  height: 1rem;
+  margin: 5px auto 2px;
+  display: block;
+  background-size: 1rem;
+}
+.aui-bar-tab .aui-bar-tab-item.aui-active i {
+  background-size: 1rem;
+}
+.aui-bar-tab .aui-bar-tab-item i::before {
+  display: none;
+}
+.aui-icon-home {
+  background: url(../image/icon_home.png) no-repeat;
+}
+.aui-icon-menu {
+  background: url(../image/icon_classify.png) no-repeat;
+  background-position: 0 2px;
+}
+.aui-icon-find {
+  background: url(../image/icon_find.png) no-repeat;
+}
+.aui-bar-tab .aui-bar-tab-item .aui-icon-task {
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  left: 50%;
+  top: -18px;
+  background: url(../image/icon_task.png) #fff no-repeat;
+  background-size: 100%;
+  margin:0 0 0 -24px;
+  border-radius:50%;
+}
+.aui-bar-tab .aui-bar-tab-item.aui-active .aui-icon-task {
+  background-size: 100%;
+}
+.task-label {
+  padding-top: 29px;
+  color: #0082d2;
+}
+.aui-icon-profit {
+  background: url(../image/icon_profit.png) no-repeat;
+}
+.aui-icon-my {
+  background: url(../image/icon_my.png) no-repeat;
+}
+.aui-bar-tab .aui-active .aui-icon-home {
+  background: url(../image/icon_home_active.png) no-repeat;
+}
+.aui-bar-tab .aui-active .aui-icon-menu {
+  background: url(../image/icon_classify_active.png) no-repeat;
+  background-position: 0 2px;
+}
+.aui-bar-tab .aui-active .aui-icon-find {
+  background: url(../image/icon_find_active.png) no-repeat;
+}
+.aui-bar-tab .aui-active .aui-icon-profit {
+  background: url(../image/icon_profit_active.png) no-repeat;
+}
+.aui-bar-tab .aui-active .aui-icon-my {
+  background: url(../image/icon_my_active.png) no-repeat;
+}
+.aui-btn-sm {
+  height: 1.2rem;
+  line-height: 1.2rem;
+  font-size: .6rem;
+}

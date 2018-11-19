@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>蚂蚁之家</title>
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <link rel="stylesheet" type="text/css" href="./css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="./css/aui-base.css" />
+    <link rel="stylesheet" type="text/css" href="./css/list.css" />
+</head>
+<body>
+<div class="aui-tab" id="tab">
+    <div class="aui-tab-item">
+      <div class="aui-tab-span">
+        <span id="sort">推荐排序</span><span class="aui-iconfont aui-icon-down"></span>
+      </div>
+      <ul class="aui-tab-list">
+        <li class="aui-active">推荐排序</li>
+        <li>佣金由高到底</li>
+        <li>佣金由低到高</li>
+      </ul>
+    </div>
+    <div class="aui-tab-item">
+      <div class="aui-tab-span">
+        <span id="genre">全部分类</span><span class="aui-iconfont aui-icon-down"></span>
+      </div>
+      <ul class="aui-tab-list">
+        <li class="aui-active">全部分类</li>
+        <li>充值缴费</li>
+        <li>号卡中心</li>
+        <li>套餐办理</li>
+        <li>宽带中心</li>
+      </ul>
+    </div>
+    <div class="aui-tab-item">
+      <div class="aui-tab-span">
+        <span id="releaseTime">发布时间</span><span class="aui-iconfont aui-icon-down"></span>
+      </div>
+      <div class="aui-tab-list">
+        <div class="aui-bar aui-bar-btn" type="month" id="month">
+            <div class="aui-bar-btn-item" tapmode="">
+                <i class="aui-iconfont aui-icon-minus"></i>
+            </div>
+            <div class="aui-bar-btn-item" tapmode="">
+                <input type="text" class="aui-input aui-text-center" id="mcount" value="1月" disabled>
+            </div>
+            <div class="aui-bar-btn-item" tapmode="">
+                <i class="aui-iconfont aui-icon-plus"></i>
+            </div>
+        </div>
+        <div class="aui-bar aui-bar-btn" id="year">
+            <div class="aui-bar-btn-item" tapmode="">
+                <i class="aui-iconfont aui-icon-minus"></i>
+            </div>
+            <div class="aui-bar-btn-item" tapmode="">
+                <input type="number" class="aui-input aui-text-center" id="ycount" value="2018" disabled>
+            </div>
+            <div class="aui-bar-btn-item" tapmode="">
+                <i class="aui-iconfont aui-icon-plus"></i>
+            </div>
+        </div>
+
+        <div class="aui-bar-foot">
+          <div class="aui-foot-btn"><a href="#" id="clear" class="aui-btn aui-btn-info aui-btn-sm">清除</a></div>
+          <div class="aui-foot-btn"><a href="#" id="confirm" class="aui-btn aui-btn-info aui-btn-sm">确定</a></div>
+        </div>
+      </div>
+    </div>
+</div>
+<div class="aui-mask" id="mask"></div>
+<script type="text/javascript" src="./script/api.js"></script>
+<script type="text/javascript" src="./script/aui-tab.js"></script>
+<script type="text/javascript" src="./script/jquery-2.2.3.min.js"></script>
+<script>
+apiready = function(){
+    api.parseTapmode();
+}
+
+var bar = document.querySelectorAll(".aui-bar-btn");
+if(bar){
+    for(var i=0; i<bar.length;i++){
+        var d = bar[i];
+        var tab = new auiTab({
+            element:bar[i],
+            repeatClick:true
+        },function(ret){
+            if(ret.dom.parentNode.getAttribute("type")){
+                console.log(ret.index);
+                var mcount = parseInt(document.getElementById("mcount").value);
+                if(ret.index==2)return;
+                if(ret.index==1){
+                    if(mcount-1 ==0) {
+                      mcount = 13;
+                    }
+                    document.getElementById("mcount").value = mcount-1 + "月";
+                }
+                if(ret.index==3){
+                  if(mcount+1 == 13) {
+                    mcount = 0;
+                  }
+                  document.getElementById("mcount").value = mcount+1 + "月";
+                }
+            } else {
+              var ycount = parseInt(document.getElementById("ycount").value);
+              if(ret.index==2)return;
+              if(ret.index==1){
+                  document.getElementById("ycount").value = ycount-1;
+              }
+              if(ret.index==3){
+                  document.getElementById("ycount").value = ycount+1;
+              }
+            };
+        });
+
+    }
+}
+$(".aui-tab-item .aui-tab-span").click(function () {
+  $(this).parent().toggleClass("aui-active");
+  $(this).parent().siblings().removeClass("aui-active");
+  $(".aui-mask").toggleClass("aui-mask-in");
+});
+$(".aui-mask").click(function() {
+  $(this).removeClass("aui-mask-in");
+  $(".aui-tab .aui-tab-item").removeClass("aui-active");
+})
+$("#confirm").click(function() {
+  var ycount = $("#ycount").val() + "年";
+  var mcount = $("#mcount").val();
+  $("#releaseTime").html(ycount + mcount);
+  $(".aui-tab .aui-tab-item").removeClass("aui-active");
+  $(".aui-tab").next("#mask").removeClass("aui-mask-in");
+});
+$("#clear").click(function () {
+  $("#releaseTime").html("发布时间");
+  $(".aui-tab .aui-tab-item").removeClass("aui-active");
+  $(".aui-tab").next("#mask").removeClass("aui-mask-in");
+})
+$(".aui-tab-list li").click(function() {
+  var html = $(this).html();
+  $(this).addClass("aui-active").siblings().removeClass("aui-active");
+  $(this).parents(".aui-tab-item").find("#sort").removeClass("aui-active").html(html);
+  $(this).parents(".aui-tab-item").find("#genre").removeClass("aui-active").html(html);
+  $(this).parents(".aui-tab-item").removeClass("aui-active");
+  $(".aui-tab").next("#mask").removeClass("aui-mask-in");
+})
+</script>
+</body>
+</html>

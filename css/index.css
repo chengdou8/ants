@@ -1,0 +1,208 @@
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  font-size: .675rem;
+  position: fixed;
+  z-index: 10000;
+}
+.aui-content {
+  margin-top: 45px;
+}
+.aui-searchbar {
+  background: transparent;
+  width: 63%;
+}
+.react {
+  display: block;
+  position: relative;
+  padding: 0 15px;
+}
+.react .aui-arrow-down::before,.react .aui-arrow-down::after {
+  border: 5px solid transparent;
+  border-top: 5px solid #1983d1;
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 20px;
+  right: 0;
+  content: ' ';
+}
+.react .aui-arrow-down::before {
+  border-top-color: #fff;
+  border-width: 6px;
+  right: -1px;
+}
+.aui-service, .aui-message {
+  padding-top: 8px;
+  line-height: 0;
+  font-size: 14px;
+}
+.aui-service {
+  padding: 8px 10px 0 0;
+}
+.aui-service .icon_service {
+  display: inline-block;
+  padding-top: 26px;
+  background: url(../image/icon_service.png) no-repeat center -1px;
+  background-size: 18px;
+}
+.aui-message .icon_message {
+  display: inline-block;
+  padding-top: 26px;
+  background: url(../image/icon_message.png) no-repeat center 0;
+  background-size: 18px;
+  position: relative;
+}
+.aui-message .icon_message i {
+  position: absolute;
+  background: #ff0000;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  color: #fff;
+  line-height: 15px;
+  top: -4px;
+  right: -5px;
+  font-style: normal;
+  font-size: 8px;
+}
+.aui-grid [class*=aui-col-]:first-child,.aui-grid [class*=aui-col-]:nth-child(2),.aui-grid [class*=aui-col-]:nth-child(3),.aui-grid [class*=aui-col-]:nth-child(4) {
+  padding-bottom: 0;
+}
+.aui-grid [class*=aui-col-] a {
+  display: block;
+  color: #333;
+}
+.aui-group-title {
+  text-align: center;
+  padding: 10px 0 5px;
+  background: url(../image/line.png) no-repeat center 20px;
+}
+.aui-grid .aui-grid-label {
+  font-size: 0.675rem;
+  margin-top: 0.2rem;
+}
+.aui-grid .aui-grid-txt {
+  font-size: .675rem;
+  color: #f65455;
+}
+.aui-grid .aui-flex-img .aui-flex-3 .aui-total {
+  font-size: 12px;
+  text-align: left;
+  padding: 3px 5px .25rem;
+  color: #757575;
+  overflow: hidden;
+}
+.aui-total em {
+  color: #0082d2;
+}
+.aui-grid .aui-grid-txt em {
+  font-size: .875rem;
+}
+.aui-btn-sm {
+  height: 1rem;
+  line-height: 1rem;
+  padding: 0 .2rem;
+  font-size: 12px;
+  float: right;
+}
+.aui-tit {
+  padding: 15px;
+}
+.aui-tit .aui-right {
+  padding-top: 0;
+}
+.aui-tit img {
+  width: 66px;
+  height: 16px;
+  float: left;
+}
+.aui-tit .tit-txt {
+	float: left;
+	border: 1px solid #f65455;
+	border-radius: 0 35% 35% 0;
+	font-size: 12px;
+	color: #f65455;
+	line-height: 1em;
+	padding: 1px 3px 1px 1px;
+	margin: 1px 0 0 5px;
+}
+.aui-tit .tit-des {
+  font-size: .6rem;
+  padding: 0 10px;
+  color: #757575;
+}
+.aui-grid-img {
+  text-align: center;
+  height: 1.5rem;
+}
+.aui-grid-img img {
+  display: inline;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.aui-grid [class*=aui-col-] {
+  padding: .5rem 0;
+}
+.aui-hot {
+  background-color: #f75e5f;
+  padding: 0px 1px;
+  font-size: 8px;
+  color: #fff;
+  border-radius: 5px;
+  line-height: 1.2;
+  position: absolute;
+  right: -30px;
+  top: 3px;
+}
+.aui-float-left {
+  float: left;
+}
+.aui-flex-img {
+	padding: 0 15px 15px;
+	display:-webkit-flex;
+	display:flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+}
+.aui-flex-img .aui-flex-2 {
+	width:48.5%;
+}
+.aui-grid .aui-flex-img .aui-flex-3 {
+	width:31.5%;
+  text-align: center;
+  border: 1px solid #e8e8e8;
+}
+.aui-grid .aui-flex-3 .aui-grid-label, .aui-flex-3 p {
+  font-size: .625rem;
+}
+.aui-grid .aui-flex-3 .aui-grid-label {
+  margin-top: .35rem;
+}
+.aui-grid .aui-flex-3 a .aui-grid-label {
+  color: #000;
+}
+.aui-flex-3 p {
+  padding-bottom: .25rem;
+}
+.aui-item-img {
+  padding: 0 15px 15px;
+}
+.aui-bottom {
+  margin: 45px 15px;
+  height: 1px;
+  background-color: #ddd;
+  position: relative;
+}
+.aui-bottom span {
+  position: absolute;
+  width: 110px;
+  height: 30px;
+  background-color: #f5f5f5;
+  left: 50%;
+  margin-left: -55px;
+  text-align: center;
+  top: -10px;
+  font-size: .7rem;
+  color: #999;
+}

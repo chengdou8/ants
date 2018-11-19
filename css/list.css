@@ -1,0 +1,30 @@
+.aui-tab-item .aui-iconfont {font-size: .6rem; padding-left: 5px; top: -1px;}
+.aui-tab-item.aui-active .aui-iconfont {display: inline-block;transform: rotate(180deg);-webkit-transform: rotate(180deg); padding-left: 0;padding-right: 5px;}
+.aui-tab-item.aui-active {color: #0082d2;border: 0 none;}
+.aui-tab {border-bottom: 1px solid #efefef; z-index: 10; width: 100%;}
+.aui-tab .aui-tab-item:first-child::before,.aui-tab .aui-tab-item:nth-child(2)::before {width: 1px;height: 20px;background-color: #ddd;position: absolute;top: 13px;right: 0;content: " ";}
+.aui-list {margin-bottom: 20px; background: transparent;border-top: none;}
+.aui-list .aui-list-item {margin: 10px 0; background-color: #fff;}
+.aui-list .aui-list-item-inner {padding-bottom:5px;}
+.aui-list .aui-list-item-media {width: 4.8rem; padding-bottom: 10px;}
+.aui-list .aui-list-item-media img {border-radius: 4px; height: 3.8rem;}
+.aui-list .aui-list-item-text {display: block;}
+.aui-list .aui-list-item-title {font-size: .75rem;}
+.aui-list .aui-list-item-des {font-size: 12px; padding: 3px 0;}
+.aui-list-item-total .aui-btn {float: right;height: 1.1rem;line-height: 1.1rem;padding: 0 8px;font-size: .6rem; margin-top: 2px;}
+.aui-list .aui-list-item-text .aui-list-item-total {color: #454545; font-size: .675rem;}
+.aui-list .aui-list-item-text .aui-list-item-total em {font-size: .9rem;}
+.aui-list-item-tis {display: flex;}
+.aui-list-item-tis .item-tis-3 {width: 33.3%; font-size: .625rem; border-right: 1px dashed #efefef; border-top: 1px solid #efefef; padding: 6px 0 5px; text-align: center;color: #757575;}
+.aui-list-item-tis .item-tis-3:last-child {border-right: none;}
+.aui-tab-list {position: absolute;left: 0;z-index: 100;text-align: left;line-height: 1.5rem;background: #fff;padding: 0 15px 15px;width: 300%;top: 44px; display: none;}
+.aui-tab-list li {color: #444;}
+.aui-tab-list li.aui-active {color: #0082d2;}
+.aui-active .aui-tab-list {display: block;}
+.aui-tab .aui-tab-item:nth-child(2) .aui-tab-list {left: -100%;}
+.aui-tab .aui-tab-item:last-child .aui-tab-list {left: -200%;}
+.aui-bar-btn-item,.aui-bar-btn-item.aui-active {border-color: #ddd; color: #454545; width: auto; background: transparent;}
+.aui-bar-btn {width: 50%; float: left; box-sizing:border-box; padding: 0 8%;}
+.aui-tab-item .aui-tab-list .aui-iconfont {padding: 0; font-size: .7rem; display: block; padding-left: 8px; padding-right: 8px;}
+.aui-bar-foot {clear: both; display: flex;}
+.aui-foot-btn {width: 50%; text-align: center; margin-top: 15px; padding-top: 10px;border-top: 1px solid #efefef;}

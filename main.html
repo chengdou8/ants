@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>蚂蚁之家</title>
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <link rel="stylesheet" type="text/css" href="./css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="./css/aui-slide.css" />
+    <link rel="stylesheet" type="text/css" href="./css/main.css" />
+</head>
+<body>
+  <div class="aui-content">
+    <section class="aui-grid">
+      <div id="aui-slide">
+        <div class="aui-slide-wrap" >
+          <div class="aui-slide-node"><img src="image/201802081121.jpg" /></div>
+          <div class="aui-slide-node"><img src="image/201802081122.jpg" /></div>
+          <div class="aui-slide-node"><img src="image/201802081123.jpg" /> <a href="index.html" class="experience">立即体验</a> </div>
+        </div>
+        <div class="aui-slide-page-wrap"></div>
+      </div>
+    </section>
+  </div>
+  <script type="text/javascript" src="./script/api.js"></script>
+  <script type="text/javascript" src="./script/aui-slide.js"></script>
+  <script type="text/javascript">
+    var height = document.documentElement.clientHeight;
+    var slide = new auiSlide({
+        container:document.getElementById("aui-slide"),
+        "height": height,
+        "speed":300,
+        "pageShow":true,
+        "pageStyle":'dot',
+        'dotPosition':'center'
+    })
+  </script>
+</body>
+</html>

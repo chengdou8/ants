@@ -1,0 +1,245 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>蚂蚁之家-全部分类</title>
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <link rel="stylesheet" type="text/css" href="./css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="./css/aui-base.css" />
+    <link rel="stylesheet" type="text/css" href="./css/menu.css" />
+    <script type="text/javascript" src="./script/api.js"></script>
+    <script type="text/javascript" src="./script/aui-tab.js" ></script>
+</head>
+<body>
+  <header class="aui-bar aui-bar-nav" id="aui-header">
+      <a class="aui-btn aui-pull-left" tapmode onclick="closeWin()">
+          <span class="aui-iconfont aui-icon-left"></span>
+      </a>
+      <div class="aui-title">全部分类</div>
+  </header>
+
+  <div class="aui-searchbar" id="search">
+    <div class="aui-searchbar-input aui-border-radius" tapmode="">
+        <i class="aui-iconfont aui-icon-search"></i>
+        <form action="javascript:search();">
+            <input type="search" placeholder="输入关键词，快速寻找你的业务" id="search-input">
+        </form>
+    </div>
+  </div>
+  <div class="aui-content">
+    <section class="aui-grid aui-box-shadow">
+      <div class="aui-wechat-top">
+        <div class="aui-wechat-title">充值缴费</div>
+      </div>
+      <div class="aui-row">
+          <div class="aui-col-xs-3">
+            <a href="">
+              <div class="aui-grid-img"><img src="image/ico_flow.png"></div>
+              <div class="aui-grid-label">流量直充</div>
+            </a>
+          </div>
+          <div class="aui-col-xs-3">
+            <a href="">
+              <div class="aui-grid-img"><img src="image/ico_hf.png"></div>
+              <div class="aui-grid-label">话费充值</div>
+            </a>
+          </div>
+          <div class="aui-col-xs-3">
+            <a href="">
+              <div class="aui-grid-img"><img src="image/ico_record.png"></div>
+              <div class="aui-grid-label">充值记录</div>
+            </a>
+          </div>
+      </div>
+    </section>
+
+    <section class="aui-grid aui-margin-t-15 aui-box-shadow">
+      <div class="aui-wechat-top">
+        <div class="aui-wechat-title">业务办理</div>
+      </div>
+      <div class="aui-row">
+          <div class="aui-col-xs-3">
+            <a href="">
+              <div class="aui-grid-img"><img src="image/ico_tc.png"></div>
+              <div class="aui-grid-label">套餐商品</div>
+            </a>
+          </div>
+          <div class="aui-col-xs-3">
+            <a href="">
+              <div class="aui-grid-img"><img src="image/ico_ll.png"></div>
+              <div class="aui-grid-label">流量商品</div>
+            </a>
+          </div>
+      </div>
+    </section>
+
+    <section class="aui-grid aui-margin-t-15 aui-box-shadow">
+      <div class="aui-wechat-top">
+        <div class="aui-wechat-title">号卡服务</div>
+      </div>
+      <div class="aui-row">
+          <div class="aui-col-xs-3">
+            <a href="">
+              <div class="aui-grid-img"><img src="image/ico_xh.png"></div>
+              <div class="aui-grid-label">选号入网</div>
+            </a>
+          </div>
+          <div class="aui-col-xs-3">
+            <a href="">
+              <div class="aui-grid-img"><img src="image/ico_fk.png"></div>
+              <div class="aui-grid-label">副卡办理</div>
+            </a>
+          </div>
+          <div class="aui-col-xs-3">
+            <a href="">
+              <div class="aui-grid-img"><img src="image/ico_sm.png"></div>
+              <div class="aui-grid-label">实名登记</div>
+            </a>
+          </div>
+          <div class="aui-col-xs-3">
+            <a href="">
+              <div class="aui-grid-img"><img src="image/ico_rz.png"></div>
+              <div class="aui-grid-label">认证激活</div>
+            </a>
+          </div>
+          <div class="aui-col-xs-3">
+            <a href="">
+              <div class="aui-grid-img"><img src="image/ico_hdh.png"></div>
+              <div class="aui-grid-label">和多号</div>
+            </a>
+          </div>
+          <div class="aui-col-xs-3">
+            <a href="">
+              <div class="aui-grid-img"><img src="image/ico_rwy.png"></div>
+              <div class="aui-grid-label">任我用</div>
+            </a>
+          </div>
+      </div>
+    </section>
+
+    <section class="aui-grid aui-margin-t-15 aui-box-shadow">
+      <div class="aui-wechat-top">
+        <div class="aui-wechat-title">宽带专区</div>
+      </div>
+      <div class="aui-row">
+          <div class="aui-col-xs-3">
+            <a href="">
+              <div class="aui-grid-img"><img src="image/ico_fg.png"></div>
+              <div class="aui-grid-label">覆盖查询</div>
+            </a>
+          </div>
+          <div class="aui-col-xs-3">
+            <a href="">
+              <div class="aui-grid-img"><img src="image/ico_kd.png"></div>
+              <div class="aui-grid-label">宽带新装</div>
+            </a>
+          </div>
+          <div class="aui-col-xs-3">
+            <a href="">
+              <div class="aui-grid-img"><img src="image/ico_dd.png"></div>
+              <div class="aui-grid-label">订单查询</div>
+            </a>
+          </div>
+      </div>
+    </section>
+
+    <section class="aui-grid aui-margin-t-15 aui-box-shadow">
+      <div class="aui-wechat-top">
+        <div class="aui-wechat-title">常用工具</div>
+      </div>
+      <div class="aui-row">
+          <div class="aui-col-xs-3">
+            <a href="">
+              <div class="aui-grid-img"><img src="image/ico_fj.png"></div>
+              <div class="aui-grid-label">附近营业厅</div>
+            </a>
+          </div>
+          <div class="aui-col-xs-3">
+            <a href="">
+              <div class="aui-grid-img"><img src="image/ico_cy.png"></div>
+              <div class="aui-grid-label">常用号码</div>
+            </a>
+          </div>
+          <div class="aui-col-xs-3">
+            <a href="">
+              <div class="aui-grid-img"><img src="image/ico_hm.png"></div>
+              <div class="aui-grid-label">号码归属地</div>
+            </a>
+          </div>
+      </div>
+    </section>
+
+    <section class="aui-grid aui-margin-t-15 aui-margin-b-15 aui-box-shadow">
+      <div class="aui-wechat-top">
+        <div class="aui-wechat-title">服务指南</div>
+      </div>
+      <div class="aui-row">
+          <div class="aui-col-xs-3">
+            <a href="">
+              <div class="aui-grid-img"><img src="image/ico_st.png"></div>
+              <div class="aui-grid-label">实体营业厅</div>
+            </a>
+          </div>
+          <div class="aui-col-xs-3">
+            <a href="">
+              <div class="aui-grid-img"><img src="image/ico_dx.png"></div>
+              <div class="aui-grid-label">短信营业厅</div>
+            </a>
+          </div>
+          <div class="aui-col-xs-3">
+            <a href="">
+              <div class="aui-grid-img"><img src="image/ico_ws.png"></div>
+              <div class="aui-grid-label">网上营业厅</div>
+            </a>
+          </div>
+          <div class="aui-col-xs-3">
+            <a href="">
+              <div class="aui-grid-img"><img src="image/ico_sj.png"></div>
+              <div class="aui-grid-label">手机营业厅</div>
+            </a>
+          </div>
+          <div class="aui-col-xs-3">
+            <a href="">
+              <div class="aui-grid-img"><img src="image/ico_10086.png"></div>
+              <div class="aui-grid-label">10086热线</div>
+            </a>
+          </div>
+      </div>
+    </section>
+
+    <footer class="aui-bar aui-bar-tab" id="footer">
+        <div class="aui-bar-tab-item" tapmode>
+            <i class="aui-icon-home"></i>
+            <div class="aui-bar-tab-label">首页</div>
+        </div>
+        <div class="aui-bar-tab-item aui-active" tapmode>
+            <i class="aui-icon-menu"></i>
+            <div class="aui-bar-tab-label">分类</div>
+        </div>
+        <div class="aui-bar-tab-item" tapmode>
+            <i class="aui-icon-task"></i>
+            <div class="aui-bar-tab-label task-label">找任务</div>
+        </div>
+        <div class="aui-bar-tab-item" tapmode>
+            <i class="aui-icon-profit"></i>
+            <div class="aui-bar-tab-label">收益</div>
+        </div>
+        <div class="aui-bar-tab-item" tapmode>
+            <i class="aui-icon-my"></i>
+            <div class="aui-bar-tab-label">我的</div>
+        </div>
+    </footer>
+  </div>
+  <script type="text/javascript">
+      apiready = function(){
+          api.parseTapmode();
+      }
+      var tab = new auiTab({
+          element:document.getElementById("footer")
+      },function(ret){
+          console.log(ret);
+      });
+  </script>
+</body>
+</html>

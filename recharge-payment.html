@@ -1,0 +1,418 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>蚂蚁之家-充值缴费</title>
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <link rel="stylesheet" type="text/css" href="./css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="./css/aui-slide.css" />
+    <link rel="stylesheet" type="text/css" href="./css/aui-base.css" />
+    <link rel="stylesheet" type="text/css" href="./css/basic.css" />
+</head>
+<body onload="FillMobile()">
+  <header class="aui-bar aui-bar-nav" id="aui-header">
+      <a class="aui-btn aui-pull-left" tapmode>
+          <span class="aui-iconfont aui-icon-left"></span>
+      </a>
+      <a class="aui-btn aui-pull-left" tapmode>
+          <span class="aui-iconfont aui-icon-close"></span>
+      </a>
+      <div class="aui-title">充值缴费</div>
+  </header>
+  <div class="aui-content">
+    <section class="aui-grid">
+      <div id="aui-slide">
+        <div class="aui-slide-wrap" >
+          <div class="aui-slide-node"><img src="image/201801191448.jpg" /></div>
+          <div class="aui-slide-node"><img src="image/201801191448.jpg" /></div>
+        </div>
+        <div class="aui-slide-page-wrap"></div>
+      </div>
+    </section>
+
+    <section class="aui-grid aui-margin-t-10">
+      <div class="aui-tab" id="tab">
+          <div class="aui-tab-item aui-active" tapmode="" data-item-order="0">话费充值</div>
+          <div class="aui-tab-item" tapmode="" data-item-order="1">流量充值</div>
+      </div>
+      <div class="aui-task-content" id="bill">
+        <form class="" action="" method="post">
+          <div class="aui-task-call">
+            <div class="aui-call-left">
+              <input type="text" class="aui-input" placeholder="请输入手机号码" id="phone" name="phone" maxlength="13" value="15129097823">
+              <p><span class="province">陕西</span><span class="operator">移动</span></p>
+            </div>
+            <div class="aui-call-right">
+              <a class="aui-maillist">通讯录</a>
+            </div>
+          </div>
+          <div class="aui-call-list">
+            <a class="aui-col-xs-4">10元<span class="aui-des">售价：9.95元</span></a>
+            <a class="aui-col-xs-4">20元<span class="aui-des">售价：19.85元</span></a>
+            <a class="aui-col-xs-4">30元<span class="aui-des">售价：29.50元</span></a>
+            <a class="aui-col-xs-4">50元<span class="aui-des">售价：49.20元</span></a>
+            <a class="aui-col-xs-4">100元<span class="aui-des">售价：88.85元</span></a>
+            <a class="aui-col-xs-4">200元<span class="aui-des">售价：182.50元</span></a>
+            <a class="aui-col-xs-4">300元<span class="aui-des">售价：281.20元</span></a>
+            <a class="aui-col-xs-4">500元<span class="aui-des">售价：475.95元</span></a>
+          </div>
+
+          <div class="aui-task-box">
+            <ul class="aui-list aui-list-in">
+              <li class="aui-list-item">
+                  <div class="aui-list-item-title"><span class="task-dot">减</span>立减金 <a tapmode onclick="openDialog('text')" class="task-detail">活动详情</a><p>活动起止时间：2018-1-25-2018-3-15</p></div>
+              </li>
+              <li class="aui-list-item" id="coupon">
+                  <div class="aui-list-item-inner aui-list-item-arrow">
+                      <label><input class="aui-radio" name="coupon" type="checkbox"> 优惠券</label>
+                      <div class="aui-list-item-right">暂无</div>
+                  </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="aui-btn-group aui-submite">
+            <button type="button" class="aui-btn aui-btn-sm aui-btn-block aui-btn-info" tapmode onclick="openActionsheet()">立即充值</button>
+            <p class="aui-lay">请仔细核对充值号码，充错号将无法退款</p>
+          </div>
+        </form>
+      </div>
+      <div class="aui-task-tip" id="flow" style="display:none">
+        <div class="aui-task-flow">
+          <form class="" action="" method="post">
+            <div class="aui-task-call">
+              <div class="aui-call-left">
+                <input type="text" class="aui-input" placeholder="请输入手机号码" id="mobile" name="mobile" maxlength="13" value="15129097823">
+                <p><span class="province">陕西</span><span class="operator">移动</span></p>
+              </div>
+              <div class="aui-call-right">
+                <a class="aui-maillist">通讯录</a>
+              </div>
+            </div>
+
+            <div class="aui-tab" id="ntab">
+                <div class="aui-tab-item aui-active" tapmode="" data-item-order="0">月包</div>
+                <div class="aui-tab-item" tapmode="" data-item-order="1">日包</div>
+                <div class="aui-tab-item" tapmode="" data-item-order="2">小时包</div>
+                <div class="aui-tab-item" tapmode="" data-item-order="3">个性包</div>
+            </div>
+
+            <div class="aui-call-list">
+              <a class="aui-col-xs-4">30G<span class="aui-des">售价：300.00元</span></a>
+              <a class="aui-col-xs-4">15G<span class="aui-des">售价：200.00元</span></a>
+              <a class="aui-col-xs-4">10G<span class="aui-des">售价：150.00元</span></a>
+              <a class="aui-col-xs-4">5G<span class="aui-des">售价：100.00元</span></a>
+              <a class="aui-col-xs-4">3G<span class="aui-des">售价：70.00元</span></a>
+              <a class="aui-col-xs-4">2G<span class="aui-des">售价：50.00元</span></a>
+              <a class="aui-col-xs-4">1G<span class="aui-des">售价：30.00元</span></a>
+              <a class="aui-col-xs-4">300M<span class="aui-des">售价：20.00元</span></a>
+              <a class="aui-col-xs-4">100M<span class="aui-des">售价：10.00元</span></a>
+            </div>
+
+            <div class="aui-task-box">
+              <ul class="aui-list aui-flow">
+                <li class="aui-list-item">
+                    <div class="aui-list-item-title"><span class="aui-ctitle">330.00元</span><p><span class="flow-dot">全国</span>有效期11个月，到账后生效　<a href="javascript:;" tapmode onclick="openDialog('flow')">详情 >></a> </p></div>
+                    <a href="javascript:;" class="aui-btn aui-btn-info aui-btn-sm aui-btn-outlined aui-margin-t-10">立即抢购</a>
+                </li>
+                <li class="aui-list-item">
+                    <div class="aui-list-item-title"><span class="aui-ctitle">300.00元</span><p><span class="flow-dot">省内</span>月底失效，到账后生效</p></div>
+                    <a href="javascript:;" class="aui-btn aui-btn-info aui-btn-sm aui-btn-outlined aui-margin-t-10">购买</a>
+                </li>
+                <li class="aui-list-item">
+                    <div class="aui-list-item-title"><span class="aui-ctitle">310.00元</span><p><span class="flow-dot">全国</span>月底失效，到账后生效</p></div>
+                    <a href="javascript:;" class="aui-btn aui-btn-info aui-btn-sm aui-btn-outlined aui-margin-t-10">购买</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="aui-task-box">
+              <ul class="aui-list aui-flow aui-list-in ">
+                <li class="aui-list-item">
+                    <div class="aui-list-item-title">
+                      <span class="aui-ctitle">500M</span><span class="aui-flow-price">/ 3.10元</span>
+                      <p>当日有效，省内可用</p>
+                    </div>
+                    <a href="javascript:;" class="aui-btn aui-btn-info aui-btn-sm aui-btn-outlined aui-margin-t-10">立即抢购</a>
+                </li>
+                <li class="aui-list-item">
+                    <div class="aui-list-item-title">
+                      <span class="aui-ctitle">1G</span><span class="aui-flow-price">/ 8.00元</span>
+                      <p>7日有效，省内可用</p>
+                    </div>
+                    <a href="javascript:;" class="aui-btn aui-btn-info aui-btn-sm aui-btn-outlined aui-margin-t-10">购买</a>
+                </li>
+                <li class="aui-list-item">
+                    <div class="aui-list-item-title">
+                      <span class="aui-ctitle">1G</span><span class="aui-flow-price">/ 3.00元</span>
+                      <p>回家流量包，国内24小时有效</p>
+                    </div>
+                    <a href="javascript:;" class="aui-btn aui-btn-info aui-btn-sm aui-btn-outlined aui-margin-t-10">购买</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="aui-task-box">
+              <ul class="aui-list aui-list-in">
+                <li class="aui-list-item">
+                    <div class="aui-list-item-title"><span class="task-dot">减</span>立减金 <a tapmode onclick="openDialog('flow')" class="task-detail">活动详情</a><p>活动起止时间：2018-1-25-2018-3-15</p></div>
+                </li>
+                <li class="aui-list-item" id="coupon">
+                    <div class="aui-list-item-inner aui-list-item-arrow">
+                        <label><input class="aui-radio" name="coupon" type="checkbox"> 优惠券</label>
+                        <div class="aui-list-item-right">暂无</div>
+                    </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="aui-btn-group aui-submite">
+              <button type="button" class="aui-btn aui-btn-sm aui-btn-block aui-btn-info" tapmode onclick="openActionsheet()">立即充值</button>
+              <p class="aui-lay">请仔细核对充值号码，充错号将无法退款</p>
+            </div>
+          </form>
+
+        </div>
+      </div>
+
+      <div class="aui-shade" id="mask" tapmode onclick="closeActionsheet()"></div>
+      <div class="aui-actionsheet" id="actionsheet">
+        <div class="aui-sheetBox">
+          <div class="aui-actionsheet-content sheet-in" id="confirmPayment">
+            <div class="aui-actionsheet-title">
+              <span class="aui-iconfont aui-icon-close" tapmode onclick="closeActionsheet()"></span>确认付款
+            </div>
+            <div class="aui-actionsheet-item">
+              <p>实付金额（元）</p>
+              <div class="aui-total">¥ 9.95</div>
+            </div>
+            <div class="aui-actionsheet-item">
+              <label>订单信息</label>
+              <div class="aui-item-right aui-ellipsis-1">137-7246-3128 陕西移动 10元充值 快充即时到账</div>
+            </div>
+            <div class="aui-actionsheet-item" tapmode onclick="openPayment()">
+              <div class="aui-list-item-arrow">
+                  <label>支付方式</label>
+                  <div class="aui-item-right aui-ellipsis-1" id="payMethod">微信</div>
+              </div>
+            </div>
+            <div class="aui-btn-group aui-payment">
+              <button type="button" class="aui-btn aui-btn-sm aui-btn-block aui-btn-info">立即付款</button>
+            </div>
+          </div>
+
+          <div class="aui-payment-content payment-out" id="selectPayment">
+            <div class="aui-actionsheet-title">
+              <span class="aui-iconfont aui-icon-left" tapmode onclick="closePayment()"></span>选择支付方式
+            </div>
+            <ul class="aui-payment-list">
+                <li class="aui-list-item">
+                  <label>
+                    <div class="aui-list-item-inner"><i class="aui-icon-wechat"></i><span>微信支付</span></div>
+                    <div class="aui-list-item-right"><input type="radio" name="bank" checked class="aui-radio"></div>
+                  </label>
+                </li>
+                <li class="aui-list-item">
+                  <label>
+                    <div class="aui-list-item-inner"><i class="aui-icon-alipay"></i><span>支付宝支付</span></div>
+                    <div class="aui-list-item-right"><input type="radio" name="bank" class="aui-radio"></div>
+                  </label>
+                </li>
+                <li class="aui-list-item">
+                  <label>
+                    <div class="aui-list-item-inner"><i class="aui-icon-card"></i><span>银联支付</span></div>
+                    <div class="aui-list-item-right"><input type="radio" name="bank" class="aui-radio"></div>
+                  </label>
+                </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer class="aui-bar aui-bar-tab" id="footer">
+      <div class="aui-bar-tab-item" tapmode>
+          <i class="aui-icon-home"></i>
+          <div class="aui-bar-tab-label">首页</div>
+      </div>
+      <div class="aui-bar-tab-item aui-active" tapmode>
+          <i class="aui-icon-menu"></i>
+          <div class="aui-bar-tab-label">分类</div>
+      </div>
+      <div class="aui-bar-tab-item" tapmode>
+          <i class="aui-icon-task"></i>
+          <div class="aui-bar-tab-label task-label">找任务</div>
+      </div>
+      <div class="aui-bar-tab-item" tapmode>
+          <i class="aui-icon-profit"></i>
+          <div class="aui-bar-tab-label">收益</div>
+      </div>
+      <div class="aui-bar-tab-item" tapmode>
+          <i class="aui-icon-my"></i>
+          <div class="aui-bar-tab-label">我的</div>
+      </div>
+  </footer>
+
+  <script type="text/javascript" src="./script/api.js"></script>
+  <script type="text/javascript" src="./script/aui-slide.js"></script>
+  <script type="text/javascript" src="./script/aui-tab.js"></script>
+  <script type="text/javascript" src="./script/aui-dialog.js" ></script>
+  <script type="text/javascript" src="./script/jquery-2.2.3.min.js" ></script>
+  <!-- <script type="text/javascript" src="./script/aui-actionsheet.js" ></script> -->
+  <script type="text/javascript">
+    var slide = new auiSlide({
+        container:document.getElementById("aui-slide"),
+        "height":150,
+        "speed":300,
+        "autoPlay": 3000,
+        "pageShow":true,
+        "pageStyle":'dot',
+        "loop":true,
+        'dotPosition':'center'
+    })
+  </script>
+  <script type="text/javascript">
+      apiready = function(){
+          api.parseTapmode();
+      }
+      var tab = new auiTab({
+          element:document.getElementById("tab")
+      },function(ret){
+        if(ret.index==1){
+          document.getElementById("bill").style.display = 'block';
+          document.getElementById("flow").style.display = 'none';
+        } else if(ret.index==2) {
+          document.getElementById("bill").style.display = 'none';
+          document.getElementById("flow").style.display = 'block';
+        }
+      });
+
+      var tab1 = new auiTab({
+          element:document.getElementById("ntab")
+      },function(ret){
+        console.log(ret);
+      });
+
+      var tab2 = new auiTab({
+        element:document.getElementById("footer")
+      },function(ret) {
+        console.log(ret);
+      })
+
+      var dialog = new auiDialog();
+      function openDialog(type){
+        switch (type) {
+            case "text":
+              dialog.alert({
+                  title:"活动细则",
+                  msg:'2018年1月25日 - 2018年3月15日每日10点起，蚂蚁通过【移动蚂蚁之家】手机充值场景支付金额满49元（即充值50元及以上面额）可享随机立减优惠，最高立减100元。名额有限，先到先得。',
+                  buttons:['我知道了']
+              });
+              break;
+            case "flow":
+              dialog.alert({
+                  title:"次月结转不清零",
+                  msg:'月底未使用完的流量次月5日结转，移动10086APP搜索“流量包”查看“结余流量”，随时查看使用情况。',
+                  buttons:['我知道了']
+              });
+              break;
+        }
+      }
+
+      function FillMobile() {
+          var phone = document.getElementById("phone");
+          var mobile = document.getElementById("mobile");
+          var pValue = phone.value.trim();
+          var mValue = mobile.value.trim();
+          var pLength = pValue.length;
+          var mLength = mValue.length;
+          if (pValue != "") {
+              if (pLength <= 3) {
+                  phone.value = pValue;
+              } else {
+                  if (pLength <= 7) {
+                      phone.value = pValue.substring(0, 3) + " " + pValue.substring(3, pLength);
+                  } else {
+                      phone.value = pValue.substring(0, 3) + " " + pValue.substring(3, 7) + " " + pValue.substring(7, pLength);
+                  }
+              }
+          }
+          if (mValue != "") {
+              if (mLength <= 3) {
+                  mobile.value = mValue;
+              } else {
+                  if (mLength <= 7) {
+                      mobile.value = mValue.substring(0, 3) + " " + mValue.substring(3, mLength);
+                  } else {
+                      mobile.value = mValue.substring(0, 3) + " " + mValue.substring(3, 7) + " " + mValue.substring(7, mLength);
+                  }
+              }
+          }
+      }
+
+      document.getElementById("phone").onkeyup = function() {
+        var text_len = this.value.length;
+        if (text_len === 3 || text_len === 8) {
+          this.value += " ";
+        }
+      };
+
+      document.getElementById("mobile").onkeyup = function() {
+        var text_len = this.value.length;
+        if (text_len === 3 || text_len === 8) {
+          this.value += " ";
+        }
+      };
+
+      function $(id){
+          return document.getElementById(id);
+      }
+      var actionsheet = $('actionsheet'), mask = $('mask');
+      var classVal = mask.getAttribute('class'), classSheet = actionsheet.getAttribute('class');
+      function openActionsheet() {
+        classVal = classVal.concat(" aui-mask-in");
+        classSheet = classSheet.concat(" aui-actionsheet-in");
+        mask.setAttribute("class",classVal);
+        actionsheet.setAttribute("class", classSheet);
+      }
+      function closeActionsheet() {
+        classVal = classVal.replace("aui-mask-in","");
+        mask.setAttribute("class",classVal);
+        classSheet = classSheet.replace("aui-actionsheet-in","");
+        actionsheet.setAttribute("class",classSheet);
+      }
+
+      var confirmPayment = $('confirmPayment'), selectPayment = $('selectPayment');
+      var classConfirm = confirmPayment.getAttribute('class'), classSelect = selectPayment.getAttribute('class');
+      function openPayment() {
+        classConfirm = classConfirm.replace("sheet-in","sheet-out");
+        classSelect = classSelect.replace("payment-out","payment-in")
+        confirmPayment.setAttribute("class",classConfirm);
+        selectPayment.setAttribute("class", classSelect);
+      }
+      function closePayment() {
+        classConfirm = classConfirm.replace("sheet-out","sheet-in");
+        classSelect = classSelect.replace("payment-in","payment-out")
+        confirmPayment.setAttribute("class",classConfirm);
+        selectPayment.setAttribute("class", classSelect);
+      }
+  </script>
+  <script type="text/javascript" src="./script/jquery-2.2.3.min.js" ></script>
+  <script>
+  $(function(){
+    $('.aui-payment-list .aui-list-item').click(function() {
+      var html = $(this).find(".aui-list-item-inner span").html();
+      $("#payMethod").html(html);
+      $('#confirmPayment').removeClass('sheet-out').addClass('sheet-in');
+      $('#selectPayment').removeClass('payment-in').addClass('payment-out')
+    });
+
+    $(".aui-call-list a").click(function() {
+      $(this).addClass("aui-active").siblings().removeClass("aui-active")
+    })
+  })
+  </script>
+</body>
+</html>                                                                              

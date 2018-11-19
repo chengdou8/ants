@@ -1,0 +1,44 @@
+.aui-bar-nav {position: fixed;}
+.aui-searchbar-input {
+  background-color: #e8e8e8;
+  height: 1.55rem;
+  line-height: 1.55rem;
+}
+.aui-icon-search {
+  top: 8px;
+}
+.aui-searchbar-input input {
+  height: 1.55rem;
+}
+.aui-content {
+  margin-top: 4.88rem;
+}
+.aui-searchbar {
+  height: 2.6rem;
+  position: fixed;
+  top: 45px;
+  z-index: 11;
+  background-color: #f5f5f5;
+}
+.aui-searchbar-input {
+  border-radius: .35rem;
+}
+.aui-grid [class*=aui-col-] a {
+    display: block;
+    color: #333;
+}
+.aui-wechat-top {
+  padding: 20px 15px 0;
+}
+.aui-wechat-title {
+  font-weight: bold;
+}
+.aui-grid-img {
+  text-align: center;
+  height: 1.5rem;
+}
+.aui-grid-img img {
+  display: inline;
+  width: 1.5rem;
+  height: 1.5rem;
+}

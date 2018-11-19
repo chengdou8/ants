@@ -1,0 +1,29 @@
+.aui-bar-nav {display: flex;position: fixed; left: 0; top: 0; z-index: 1000;}
+.aui-searchbar {position: fixed;left: 0; top: 2.25rem; z-index: 99;background-color: #f5f5f5;}
+.aui-content {padding: 0;margin-top: 4.45rem;}
+/*显示点击是哪个字母*/
+.showLetter{position: fixed;color:#1983d1;width: 50px;height:50px;top:50%;left: 50%; overflow: hidden;border-radius: 50%;border: #1983d1 1px solid;text-align: center;display: none;}
+.showLetter span{width: 50px;height: 50px;line-height: 50px;font-size: 30px;}
+.letter{width:auto;position:fixed;top:21%;right:5px;text-align:center;}
+.letter ul{list-style-type:none;}
+.letter ul li {line-height: 1rem;}
+.letter ul li a{text-decoration:none;font-size: 14px}
+.city{overflow:hidden;}
+.city-list{width:100%;background-color: #fff; padding-left: 15px;}
+.city-letter{font-size: 15px;display:block; padding: 0 10px; color: #999;}
+.city-list p{color: #333; height: 40px; line-height: 40px;border-bottom: 1px solid #e8ecf1;cursor: pointer;font-size: .75rem;}
+.UISelect{margin-top:5px}
+.current-city {background: #fff;padding: 10px 25px 10px 10px;overflow: auto;}
+.currTitle {font-size: .75rem;font-weight: 700;float: left;}
+.select-county {float: right;font-size: .625rem;color: #787878; margin-top: 3px; cursor: pointer;}
+.select-county span {padding-right: 5px;}
+.aui-icon-arrow::after {content: "\e6f7";}
+.aui-city {padding: 0 10px; margin: 10px 0;}
+.cityTitle {font-size: .75rem; color: #999;}
+.city-item {overflow: hidden;}
+.city-item a {display: block; width: 29.5%; float: left; margin: 5px 10px 5px 0;background-color: #fff; border:1px solid #e5e5e5; border-radius: 5px;text-align: center; line-height: 1.5rem; font-size: .75rem; color: #333;}
+.aui-lacation {width: 16px; height: 16px; background: url(../image/icon_location.png) no-repeat; background-size: 16px;display: inline-block;position: relative;left: -2px;top: 2px; z-index: 0;}
+.aui-city-hot {padding-bottom: 5px; margin-bottom: 5px; border-bottom: 1px solid #e5e5e5;}
+.aui-collapse-content {clear: both;}
+.aui-collapse-header.aui-active {background: transparent;}
+.aui-collapse-header.aui-active.aui-icon-arrow::after {display: inline-block;transform: rotate(180deg);-webkit-transform: rotate(180deg);}

@@ -1,0 +1,4 @@
+.aui-slide-page-wrap {bottom: 4.5rem;}
+.aui-slide-page-dot {width: 8px; height: 8px;}
+.aui-slide-page-active {background: #ff6600;width: 20px;border-radius: 8px;}
+.experience {width: 140px;height: 38px;position: absolute;left: 50%;bottom: 1.4rem;margin-left: -70px;text-indent: -9999px; overflow: hidden;}

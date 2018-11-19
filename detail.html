@@ -1,0 +1,441 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>蚂蚁之家-任务详情</title>
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <link rel="stylesheet" type="text/css" href="./css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="./css/aui-base.css" />
+    <link rel="stylesheet" type="text/css" href="./css/detail.css" />
+    <link rel="stylesheet" type="text/css" href="./css/photoswipe.css" />
+    <link rel="stylesheet" type="text/css" href="./css/default-skin/default-skin.css">
+</head>
+<body>
+  <header class="aui-bar aui-bar-nav" id="aui-header">
+      <a class="aui-btn aui-pull-left" tapmode>
+          <span class="aui-iconfont aui-icon-left"></span>
+      </a>
+      <div class="aui-title">任务详情</div>
+  </header>
+  <div class="aui-content">
+    <section class="aui-grid">
+      <div class="aui-img aui-relative">
+        <div class="aui-mycard">
+          <div class="my-gallery">
+              <figure>
+                  <a href="image/201802010910.jpg" data-size="750x1334">
+                    我的邀请卡
+                    <img src="image/201802010910.jpg" />
+                  </a>
+              </figure>
+              <figure>
+                  <a href="image/20180201091751.jpg" data-size="750x1334">
+                      <img src="image/20180201091751.jpg" />
+                  </a>
+              </figure>
+              <figure>
+                  <a href="image/20180201091812.jpg" data-size="750x1334">
+                      <img src="image/20180201091812.jpg" />
+                  </a>
+              </figure>
+              <figure>
+                  <a href="image/20180201091821.jpg" data-size="750x1334">
+                      <img src="image/20180201091821.jpg" />
+                  </a>
+              </figure>
+              <figure>
+                  <a href="image/20180201091828.jpg" data-size="750x1334">
+                      <img src="image/20180201091828.jpg" />
+                  </a>
+              </figure>
+          </div>
+        </div>
+        <img src="image/20180131111423.jpg" />
+      </div>
+      <ul class="aui-ul">
+        <li>流量直充30元包2G,春节心情玩</li>
+        <li><span class="aui-label">任务编号：</span>18461078</li>
+        <li><span class="aui-label">任务类型：</span>号卡中心</li>
+        <li><span class="aui-label">开始时间：</span>2018-1-8</li>
+        <li><span class="aui-label">结束时间：</span>2018-1-30</li>
+        <li><span class="aui-label">收益模式：</span>单量累计返</li>
+        <li><span class="aui-label">预计收益：</span><span class="aui-red">¥<em>15.00</em>元</span></li>
+      </ul>
+    </section>
+
+    <section class="aui-grid aui-margin-t-10">
+      <div class="aui-tab" id="tab">
+          <div class="aui-tab-item">任务说明</div>
+          <div class="aui-tab-item">温馨提示</div>
+      </div>
+      <div class="aui-task-content" id="info">
+        <div class="aui-task-info">
+          任务简介
+        </div>
+        <div class="aui-task-info">
+          基本要求
+        </div>
+      </div>
+      <div class="aui-task-tip" id="tip" style="display:none">
+        <div class="aui-task-info">
+          任务提醒
+        </div>
+      </div>
+    </section>
+
+    <div class="aui-foot-bar">
+      <div class="aui-foot-bar-item">
+        <div class="aui-pull-left">剩余：<span class="aui-primary">3000</span> 份</div>
+        <div class="aui-pull-right"><span class="aui-primary">628</span> 人已做过</div>
+      </div>
+      <div class="aui-foot-bar-btn">
+        <a href="#" class="aui-btn aui-btn-info aui-btn-block aui-btn-sm">代客下单</a>
+        <a onclick="invite()" class="aui-btn aui-btn-danger aui-btn-block aui-btn-sm">邀请下单</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="aui-model" id="inviteBox" style="display:none">
+    <div class="aui-model-top">
+      <input type="radio" class="aui-radio" checked=""> 已加入邀请推广任务列表
+    </div>
+    <div class="aui-info-box">
+      <div class="aui-info-img"><img src="image/20180131111423.jpg" /></div>
+      <div class="aui-info-content">
+        <h4 class="aui-ellipsis-1">3招解决宝宝夜醒，全家一觉睡到天亮</h4>
+        <div class="aui-info-row">
+          <span class="aui-label">预计收益：</span><span class="aui-red">¥<em>15.00</em>元</span>
+        </div>
+        <div class="aui-info-row"><span class="aui-primary">628</span> 人已做过</div>
+      </div>
+    </div>
+    <div class="aui-invite">
+      <h3>立即邀请</h3>
+      <h3><button class="aui-btn aui-btn-danger aui-btn-sm aui-btn-outlined" onclick="copyText()">复制链接</button>方式一　复制以下链接，转发邀请推广 </h3>
+      <input type="text" id="text" name="" value="http://www.anthome.vip/haoka/8XkQk568J">
+      <div class="aui-mode-2">
+        <h3>方式二　分享蚂蚁专属海报邀请推广</h3>
+        <div class="my-gallery">
+            <figure>
+                <a href="image/201802010910.jpg" data-size="750x1334">
+                    <img src="image/201802010910.jpg" />
+                </a>
+            </figure>
+            <figure>
+                <a href="image/20180201091751.jpg" data-size="750x1334">
+                    <img src="image/20180201091751.jpg" />
+                </a>
+            </figure>
+            <figure>
+                <a href="image/20180201091812.jpg" data-size="750x1334">
+                    <img src="image/20180201091812.jpg" />
+                </a>
+            </figure>
+            <figure>
+                <a href="image/20180201091821.jpg" data-size="750x1334">
+                    <img src="image/20180201091821.jpg" />
+                </a>
+            </figure>
+            <figure>
+                <a href="image/20180201091828.jpg" data-size="750x1334">
+                    <img src="image/20180201091828.jpg" />
+                </a>
+            </figure>
+        </div>
+        <p>点击邀请推广海报，长按保存转发给好友或朋
+  友圈进行推广（左右滑动可切换海报样式）</p>
+      </div>
+      <div class="aui-tip">
+        注：通过任务详情页右上角分享给好友不属于蚂蚁专属推广，使用该方式进行邀请推广无法获得【预计收益】
+      </div>
+      <div class="aui-btn-group">
+        <a href="mylist.html" class="aui-btn aui-btn-info aui-btn-block aui-btn-sm">查看邀请推广任务列表</a>
+        <a  onclick="closeModel()" class="aui-btn aui-btn-default aui-btn-block aui-btn-sm aui-btn-outlined">关闭</a>
+      </div>
+    </div>
+  </div>
+  <div class="aui-mask" id="mask" onclick="closeModel()"></div>
+
+  <!--相册功能-->
+  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+  	<div class="pswp__bg"></div>
+  	<div class="pswp__scroll-wrap">
+  		<div class="pswp__container">
+  			<div class="pswp__item"></div>
+  			<div class="pswp__item"></div>
+  			<div class="pswp__item"></div>
+  		</div>
+  		<div class="pswp__ui pswp__ui--hidden">
+  			<div class="pswp__top-bar">
+  				<div class="pswp__counter"></div>
+  				<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+  				<div class="pswp__preloader">
+  					<div class="pswp__preloader__icn">
+  						<div class="pswp__preloader__cut">
+     							<div class="pswp__preloader__donut"></div>
+                          </div>
+                      </div>
+                  </div>
+               </div>
+               <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+               	<div class="pswp__share-tooltip"></div>
+             	 </div>
+               <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+               <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+               <div class="pswp__caption">
+               	<div class="pswp__caption__center"></div>
+  			 </div>
+  		</div>
+  	</div>
+  </div>
+
+  <script type="text/javascript" src="./script/api.js"></script>
+  <script type="text/javascript" src="./script/aui-tab.js"></script>
+  <script type="text/javascript">
+      apiready = function(){
+          api.parseTapmode();
+      }
+      var tab = new auiTab({
+        element:document.getElementById("tab")
+      },function(ret) {
+        if(ret.index==1){
+          document.getElementById("info").style.display = 'block';
+          document.getElementById("tip").style.display = 'none';
+        } else if(ret.index==2) {
+          document.getElementById("info").style.display = 'none';
+          document.getElementById("tip").style.display = 'block';
+        }
+      });
+      function $(id){
+          return document.getElementById(id);
+      }
+      var inviteBox = $('inviteBox'),mask = $('mask');
+      var classVal = mask.getAttribute('class');
+      function invite() {
+        classVal = classVal.concat(" aui-mask-in");
+        inviteBox.style.display = 'block';
+        mask.setAttribute("class",classVal);
+      }
+      function closeModel() {
+        classVal = classVal.replace("aui-mask-in","");
+        inviteBox.style.display = 'none';
+        mask.setAttribute("class",classVal);
+      }
+      function copyText() {
+        var text = document.getElementById("text");
+        console.log(text)
+        text.select(); // 选中文本
+        document.execCommand("copy"); // 执行浏览器复制命令
+        alert("复制成功");
+      }
+  </script>
+  <script src="./script/photoswipe.min.js"></script>
+  <script src="./script/photoswipe-ui-default.min.js"></script>
+  <script type="text/javascript">
+      var initPhotoSwipeFromDOM = function(gallerySelector) {
+
+          // parse slide data (url, title, size ...) from DOM elements
+          // (children of gallerySelector)
+          var parseThumbnailElements = function(el) {
+              var thumbElements = el.childNodes,
+                      numNodes = thumbElements.length,
+                      items = [],
+                      figureEl,
+                      linkEl,
+                      size,
+                      item;
+
+              for (var i = 0; i < numNodes; i++) {
+
+                  figureEl = thumbElements[i]; // <figure> element
+
+                  // include only element nodes
+                  if (figureEl.nodeType !== 1) {
+                      continue;
+                  }
+
+                  linkEl = figureEl.children[0]; // <a> element
+
+                  size = linkEl.getAttribute('data-size').split('x');
+
+                  // create slide object
+                  item = {
+                      src: linkEl.getAttribute('href'),
+                      w: parseInt(size[0], 10),
+                      h: parseInt(size[1], 10)
+                  };
+
+
+
+                  if (figureEl.children.length > 1) {
+                      // <figcaption> content
+                      item.title = figureEl.children[1].innerHTML;
+                  }
+
+                  if (linkEl.children.length > 0) {
+                      // <img> thumbnail element, retrieving thumbnail url
+                      item.msrc = linkEl.children[0].getAttribute('src');
+                  }
+
+                  item.el = figureEl; // save link to element for getThumbBoundsFn
+                  items.push(item);
+              }
+
+              return items;
+          };
+
+          // find nearest parent element
+          var closest = function closest(el, fn) {
+              return el && (fn(el) ? el : closest(el.parentNode, fn));
+          };
+
+          // triggers when user clicks on thumbnail
+          var onThumbnailsClick = function(e) {
+              e = e || window.event;
+              e.preventDefault ? e.preventDefault() : e.returnValue = false;
+
+              var eTarget = e.target || e.srcElement;
+
+              // find root element of slide
+              var clickedListItem = closest(eTarget, function(el) {
+                  return (el.tagName && el.tagName.toUpperCase() === 'FIGURE');
+              });
+
+              if (!clickedListItem) {
+                  return;
+              }
+
+              // find index of clicked item by looping through all child nodes
+              // alternatively, you may define index via data- attribute
+              var clickedGallery = clickedListItem.parentNode,
+                      childNodes = clickedListItem.parentNode.childNodes,
+                      numChildNodes = childNodes.length,
+                      nodeIndex = 0,
+                      index;
+
+              for (var i = 0; i < numChildNodes; i++) {
+                  if (childNodes[i].nodeType !== 1) {
+                      continue;
+                  }
+
+                  if (childNodes[i] === clickedListItem) {
+                      index = nodeIndex;
+                      break;
+                  }
+                  nodeIndex++;
+              }
+
+
+
+              if (index >= 0) {
+                  // open PhotoSwipe if valid index found
+                  openPhotoSwipe(index, clickedGallery);
+              }
+              return false;
+          };
+
+          // parse picture index and gallery index from URL (#&pid=1&gid=2)
+          var photoswipeParseHash = function() {
+              var hash = window.location.hash.substring(1),
+                      params = {};
+
+              if (hash.length < 5) {
+                  return params;
+              }
+
+              var vars = hash.split('&');
+              for (var i = 0; i < vars.length; i++) {
+                  if (!vars[i]) {
+                      continue;
+                  }
+                  var pair = vars[i].split('=');
+                  if (pair.length < 2) {
+                      continue;
+                  }
+                  params[pair[0]] = pair[1];
+              }
+
+              if (params.gid) {
+                  params.gid = parseInt(params.gid, 10);
+              }
+
+              return params;
+          };
+
+          var openPhotoSwipe = function(index, galleryElement, disableAnimation, fromURL) {
+              var pswpElement = document.querySelectorAll('.pswp')[0],
+                      gallery,
+                      options,
+                      items;
+
+              items = parseThumbnailElements(galleryElement);
+
+              // define options (if needed)
+              options = {
+                  // define gallery index (for URL)
+                  galleryUID: galleryElement.getAttribute('data-pswp-uid'),
+                  getThumbBoundsFn: function(index) {
+                      // See Options -> getThumbBoundsFn section of documentation for more info
+                      var thumbnail = items[index].el.getElementsByTagName('img')[0], // find thumbnail
+                              pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
+                              rect = thumbnail.getBoundingClientRect();
+
+                      return {x: rect.left, y: rect.top + pageYScroll, w: rect.width};
+                  }
+
+              };
+
+              // PhotoSwipe opened from URL
+              if (fromURL) {
+                  if (options.galleryPIDs) {
+                      // parse real index when custom PIDs are used
+                      // http://photoswipe.com/documentation/faq.html#custom-pid-in-url
+                      for (var j = 0; j < items.length; j++) {
+                          if (items[j].pid == index) {
+                              options.index = j;
+                              break;
+                          }
+                      }
+                  } else {
+                      // in URL indexes start from 1
+                      options.index = parseInt(index, 10) - 1;
+                  }
+              } else {
+                  options.index = parseInt(index, 10);
+              }
+
+              // exit if index not found
+              if (isNaN(options.index)) {
+                  return;
+              }
+
+              if (disableAnimation) {
+                  options.showAnimationDuration = 0;
+              }
+
+              // Pass data to PhotoSwipe and initialize it
+              gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
+              gallery.init();
+          };
+
+          // loop through all gallery elements and bind events
+          var galleryElements = document.querySelectorAll(gallerySelector);
+
+          for (var i = 0, l = galleryElements.length; i < l; i++) {
+              galleryElements[i].setAttribute('data-pswp-uid', i + 1);
+              galleryElements[i].onclick = onThumbnailsClick;
+          }
+
+          // Parse URL and open gallery if it contains #&pid=3&gid=1
+          var hashData = photoswipeParseHash();
+          if (hashData.pid && hashData.gid) {
+              openPhotoSwipe(hashData.pid, galleryElements[ hashData.gid - 1 ], true, true);
+          }
+      };
+
+  // execute above function
+      initPhotoSwipeFromDOM('.my-gallery');
+  </script>
+</body>
+</html>                                                                              

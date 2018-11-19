@@ -1,0 +1,349 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>蚂蚁之家</title>
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <link rel="stylesheet" type="text/css" href="./css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="./css/aui-slide.css" />
+    <link rel="stylesheet" type="text/css" href="./css/aui-base.css" />
+    <link rel="stylesheet" type="text/css" href="./css/index.css" />
+</head>
+<body>
+  <header class="aui-bar aui-bar-nav header" id="aui-header">
+    <div class="react">
+      <a class="aui-arrow-down">西安</a>
+    </div>
+    <div class="aui-searchbar" id="search">
+      <div class="aui-searchbar-input" tapmode>
+          <i class="aui-iconfont aui-icon-search"></i>
+          <form action="javascript:search();">
+              <input type="search" placeholder="流量无限量时代" id="search-input">
+          </form>
+      </div>
+    </div>
+    <div class="aui-service">
+      <a class="icon_service">客服</a>
+    </div>
+    <div class="aui-message">
+      <a class="icon_message">消息<i>2</i></a>
+    </div>
+  </header>
+
+  <div class="aui-content">
+    <section class="aui-grid">
+      <div id="aui-slide">
+        <div class="aui-slide-wrap" >
+          <div class="aui-slide-node"><img src="image/201801191448.jpg" /></div>
+          <div class="aui-slide-node"><img src="image/201801191448.jpg" /></div>
+        </div>
+        <div class="aui-slide-page-wrap"></div>
+      </div>
+    </section>
+
+    <section class="aui-grid aui-box-shadow">
+      <h4 class="aui-group-title">按业务办理找任务</h4>
+      <div class="aui-row">
+          <div class="aui-col-xs-3">
+            <div class="aui-grid-img"><img src="image/icon_rp.png" /></div>
+            <div class="aui-grid-label">充值缴费</div>
+          </div>
+          <div class="aui-col-xs-3">
+            <div class="aui-grid-img"><img src="image/icon_flow.png" /></div>
+            <div class="aui-grid-label">流量特惠</div>
+          </div>
+          <div class="aui-col-xs-3">
+            <div class="aui-grid-img"><img src="image/icon_package.png" /></div>
+            <div class="aui-grid-label">套餐办理</div>
+          </div>
+          <div class="aui-col-xs-3">
+            <div class="aui-grid-img"><img src="image/icon_pick.png" /></div>
+            <div class="aui-grid-label">选号入网</div>
+          </div>
+          <div class="aui-col-xs-3">
+            <div class="aui-grid-img"><img src="image/icon_card.png" /></div>
+            <div class="aui-grid-label">卡片激活</div>
+          </div>
+          <div class="aui-col-xs-3">
+            <div class="aui-grid-img"><img src="image/icon_ba.png" /></div>
+            <div class="aui-grid-label">宽带专区</div>
+          </div>
+          <div class="aui-col-xs-3">
+            <div class="aui-grid-img"><img src="image/icon_marketing.png" /></div>
+            <div class="aui-grid-label">营销活动</div>
+          </div>
+          <div class="aui-col-xs-3">
+            <div class="aui-grid-img"><img src="image/icon_rp.png" /></div>
+            <div class="aui-grid-label">任务大厅</div>
+          </div>
+      </div>
+    </section>
+
+    <section class="aui-grid aui-margin-t-10 aui-margin-b-10">
+      <div class="aui-tit">
+        <a href="#" class="aui-right aui-grey">更多</a>
+        <img src="image/antsbb.png" />
+        <span class="tit-txt">活动</span>
+        <div class="tit-des aui-ellipsis-1">新年新时代，移动宽带免费装还送话费哦！</div>
+      </div>
+    </section>
+
+    <section class="aui-grid">
+      <div class="aui-wechat-top">
+        <div class="aui-wechat-title aui-primary aui-float-left aui-relative">热门活动<span class="aui-hot">HOT</span></div>
+        <a href="#" class="aui-right aui-grey">查看全部 +</a>
+      </div>
+      <div class="aui-flex-img">
+        <div class="aui-flex-2">
+          <a href="#"><img src="image/201801191506.png" /></a>
+        </div>
+        <div class="aui-flex-2">
+          <a href="#"><img src="image/201801191507.png" /></a>
+        </div>
+      </div>
+
+      <div id="aui-slide1">
+        <div class="aui-slide-wrap" >
+          <div class="aui-slide-node"><img src="image/201801191508.jpg" /></div>
+          <div class="aui-slide-node"><img src="image/201801191508.jpg" /></div>
+        </div>
+        <div class="aui-slide-page-wrap"></div>
+      </div>
+    </section>
+
+    <section class="aui-grid aui-margin-t-10 aui-box-shadow">
+      <div class="aui-wechat-top">
+        <div class="aui-wechat-title">流量任务</div>
+      </div>
+      <div class="aui-item-img">
+        <img src="image/201801191509.jpg" />
+      </div>
+      <div class="aui-flex-img">
+        <div class="aui-flex-3">
+          <img src="image/201801191510.jpg" />
+          <div class="aui-grid-label">70元流量不限量</div>
+          <div class="aui-grid-txt">赚：¥<em>45.00</em>元</div>
+          <div class="aui-total">
+            <a href="#" class="aui-btn aui-btn-info aui-btn-sm">去领取</a>
+            <em>8</em>人做过
+          </div>
+        </div>
+        <div class="aui-flex-3">
+          <img src="image/201801191511.jpg" />
+          <div class="aui-grid-label">70元流量不限量</div>
+          <div class="aui-grid-txt">赚：¥<em>45.00</em>元</div>
+          <div class="aui-total">
+            <a href="#" class="aui-btn aui-btn-info aui-btn-sm">去领取</a>
+            <em>8</em>人做过
+          </div>
+        </div>
+        <div class="aui-flex-3">
+          <img src="image/201801191512.jpg" />
+          <div class="aui-grid-label">70元流量不限量</div>
+          <div class="aui-grid-txt">赚：¥<em>45.00</em>元</div>
+          <div class="aui-total">
+            <a href="#" class="aui-btn aui-btn-info aui-btn-sm">去领取</a>
+            <em>8</em>人做过
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="aui-grid aui-margin-t-10 aui-box-shadow">
+      <div class="aui-wechat-top">
+        <div class="aui-wechat-title">卡号任务</div>
+      </div>
+      <div class="aui-item-img">
+        <img src="image/201801191513.jpg" />
+      </div>
+      <div class="aui-flex-img">
+        <div class="aui-flex-3">
+          <img src="image/201801191514.jpg" />
+          <div class="aui-grid-label">198手机号首发</div>
+          <div class="aui-grid-txt">赚：¥<em>45.00</em>元</div>
+          <div class="aui-total">
+            <a href="#" class="aui-btn aui-btn-info aui-btn-sm">去领取</a>
+            <em>8</em>人做过
+          </div>
+        </div>
+        <div class="aui-flex-3">
+          <img src="image/201801191515.jpg" />
+          <div class="aui-grid-label">手机副卡</div>
+          <div class="aui-grid-txt">赚：¥<em>45.00</em>元</div>
+          <div class="aui-total">
+            <a href="#" class="aui-btn aui-btn-info aui-btn-sm">去领取</a>
+            <em>8</em>人做过
+          </div>
+        </div>
+        <div class="aui-flex-3">
+          <img src="image/201801191516.jpg" />
+          <div class="aui-grid-label">新用户办理</div>
+          <div class="aui-grid-txt">赚：¥<em>45.00</em>元</div>
+          <div class="aui-total">
+            <a href="#" class="aui-btn aui-btn-info aui-btn-sm">去领取</a>
+            <em>8</em>人做过
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="aui-grid aui-margin-t-10 aui-box-shadow">
+      <div class="aui-wechat-top">
+        <div class="aui-wechat-title">套餐任务</div>
+      </div>
+      <div class="aui-item-img">
+        <img src="image/201801191517.jpg" />
+      </div>
+      <div class="aui-flex-img">
+        <div class="aui-flex-3">
+          <img src="image/201801191520.jpg" />
+          <div class="aui-grid-label">任我用(238元版)</div>
+          <div class="aui-grid-txt">赚：¥<em>45.00</em>元</div>
+          <div class="aui-total">
+            <a href="#" class="aui-btn aui-btn-info aui-btn-sm">去领取</a>
+            <em>8</em>人做过
+          </div>
+        </div>
+        <div class="aui-flex-3">
+          <img src="image/201801191519.jpg" />
+          <div class="aui-grid-label">4G商旅套餐</div>
+          <div class="aui-grid-txt">赚：¥<em>45.00</em>元</div>
+          <div class="aui-total">
+            <a href="#" class="aui-btn aui-btn-info aui-btn-sm">去领取</a>
+            <em>8</em>人做过
+          </div>
+        </div>
+        <div class="aui-flex-3">
+          <img src="image/201801191518.jpg" />
+          <div class="aui-grid-label">4G 飞享套餐</div>
+          <div class="aui-grid-txt">赚：¥<em>45.00</em>元</div>
+          <div class="aui-total">
+            <a href="#" class="aui-btn aui-btn-info aui-btn-sm">去领取</a>
+            <em>8</em>人做过
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="aui-grid aui-margin-t-10 aui-box-shadow">
+      <div class="aui-wechat-top">
+        <div class="aui-wechat-title">宽带任务</div>
+      </div>
+      <div class="aui-item-img">
+        <img src="image/201801191521.jpg" />
+      </div>
+      <div class="aui-flex-img">
+        <div class="aui-flex-3">
+          <img src="image/201801191522.jpg" />
+          <div class="aui-grid-label">宽带免费领</div>
+          <div class="aui-grid-txt">赚：¥<em>45.00</em>元</div>
+          <div class="aui-total">
+            <a href="#" class="aui-btn aui-btn-info aui-btn-sm">去领取</a>
+            <em>8</em>人做过
+          </div>
+        </div>
+        <div class="aui-flex-3">
+          <img src="image/201801191523.jpg" />
+          <div class="aui-grid-label">手机副卡</div>
+          <div class="aui-grid-txt">赚：¥<em>45.00</em>元</div>
+          <div class="aui-total">
+            <a href="#" class="aui-btn aui-btn-info aui-btn-sm">去领取</a>
+            <em>8</em>人做过
+          </div>
+        </div>
+        <div class="aui-flex-3 ">
+          <img src="image/201801191524.jpg" />
+          <div class="aui-grid-label">新用户办理</div>
+          <div class="aui-grid-txt">赚：¥<em>45.00</em>元</div>
+          <div class="aui-total">
+            <a href="#" class="aui-btn aui-btn-info aui-btn-sm">去领取</a>
+            <em>8</em>人做过
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="aui-grid aui-margin-t-10 aui-box-shadow">
+      <div class="aui-wechat-top">
+        <div class="aui-wechat-title"><a class="aui-right">换一批</a>宽带任务</div>
+      </div>
+      <div class="aui-flex-img">
+        <div class="aui-flex-3">
+          <a href="#"><img src="image/201801191525.jpg" /></a>
+        </div>
+        <div class="aui-flex-3">
+          <a href="#"><img src="image/201801191526.jpg" /></a>
+        </div>
+        <div class="aui-flex-3">
+          <a href="#"><img src="image/201801191527.jpg" /></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="aui-grid transparent">
+      <div class="aui-bottom">
+        <span>我是有底限的</span>
+      </div>
+    </section>
+  </div>
+
+  <footer class="aui-bar aui-bar-tab" id="footer">
+      <div class="aui-bar-tab-item" tapmode>
+          <i class="aui-icon-home"></i>
+          <div class="aui-bar-tab-label">首页</div>
+      </div>
+      <div class="aui-bar-tab-item aui-active" tapmode>
+          <i class="aui-icon-menu"></i>
+          <div class="aui-bar-tab-label">分类</div>
+      </div>
+      <div class="aui-bar-tab-item" tapmode>
+          <i class="aui-icon-task"></i>
+          <div class="aui-bar-tab-label task-label">找任务</div>
+      </div>
+      <div class="aui-bar-tab-item" tapmode>
+          <i class="aui-icon-profit"></i>
+          <div class="aui-bar-tab-label">收益</div>
+      </div>
+      <div class="aui-bar-tab-item" tapmode>
+          <i class="aui-icon-my"></i>
+          <div class="aui-bar-tab-label">我的</div>
+      </div>
+  </footer>
+  <script type="text/javascript" src="./script/api.js"></script>
+  <script type="text/javascript" src="./script/aui-slide.js"></script>
+  <script type="text/javascript" src="./script/aui-tab.js"></script>
+  <script type="text/javascript">
+    var slide = new auiSlide({
+        container:document.getElementById("aui-slide"),
+        "height":150,
+        "speed":300,
+        "autoPlay": 3000,
+        "pageShow":true,
+        "pageStyle":'dot',
+        "loop":true,
+        'dotPosition':'center'
+    })
+    var slide1 = new auiSlide({
+        container:document.getElementById("aui-slide1"),
+        "height":102,
+        "speed":300,
+        "autoPlay": 3000,
+        "pageShow":true,
+        "pageStyle":'dot',
+        "loop":true,
+        'dotPosition':'center'
+    })
+  </script>
+  <script type="text/javascript">
+      apiready = function(){
+          api.parseTapmode();
+      }
+      var tab = new auiTab({
+          element:document.getElementById("footer")
+      },function(ret){
+          console.log(ret);
+      });
+  </script>
+</body>
+</html>                                                                              

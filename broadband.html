@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>蚂蚁之家-宽带新装</title>
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <link rel="stylesheet" type="text/css" href="./css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="./css/aui-base.css" />
+    <link rel="stylesheet" type="text/css" href="./css/broadband.css" />
+</head>
+<body>
+<div class="aui-content">
+  <div class="aui-img"><img src="image/broabdnaMain1.jpg" /></div>
+  <div class="aui-search">
+    <input type="text" name="quarter" placeholder="请输入小区名称" /><button>立即搜索</button>
+  </div>
+
+  <ul class="aui-list aui-form-list" id="coverList">
+      <li class="aui-list-item coverlist-item">
+          <div class="aui-list-item-inner aui-list-item-arrow">
+              <div class="aui-list-item-text">高新四路糜家桥新村</div>
+          </div>
+      </li>
+      <li class="aui-list-item coverlist-item">
+          <div class="aui-list-item-inner aui-list-item-arrow">
+              <div class="aui-list-item-text">高新三路人保控股公司</div>
+          </div>
+      </li>
+      <li class="aui-list-item coverlist-item">
+          <div class="aui-list-item-inner aui-list-item-arrow">
+              <div class="aui-list-item-text">劳动南路规划局家属院</div>
+          </div>
+      </li>
+      <li class="aui-list-item coverlist-item">
+          <div class="aui-list-item-inner aui-list-item-arrow">
+              <div class="aui-list-item-text">劳动南路老虎公寓小区</div>
+          </div>
+      </li>
+      <li class="aui-list-item coverlist-item">
+          <div class="aui-list-item-inner aui-list-item-arrow">
+              <div class="aui-list-item-text">西南路与南二环十字西北角东桃园社区</div>
+          </div>
+      </li>
+      <li class="aui-list-item coverlist-item">
+          <div class="aui-list-item-inner aui-list-item-arrow">
+              <div class="aui-list-item-text">劳动南路糜家桥老区</div>
+          </div>
+      </li>
+      <li class="aui-list-item coverlist-item">
+          <div class="aui-list-item-inner aui-list-item-arrow">
+              <div class="aui-list-item-text">桃园路边防总队小区</div>
+          </div>
+      </li>
+      <li class="aui-list-item coverlist-item">
+          <div class="aui-list-item-inner aui-list-item-arrow">
+              <div class="aui-list-item-text">高新三路人保控股公司</div>
+          </div>
+      </li>
+  </ul>
+
+  <form action="" name="">
+    <ul class="aui-list aui-form-list" id="cellInfo" style="display:none">
+      <li class="aui-list-item">
+          <div class="aui-list-item-inner">
+              <div class="aui-list-item-label">小区名称：</div>
+              <div class="aui-list-item-input">
+                <input id="name" type="text" value="" readonly="" />
+              </div>
+          </div>
+      </li>
+      <li class="aui-list-item">
+          <div class="aui-list-item-inner">
+              <div class="aui-list-item-label">小区地址：</div>
+              <div class="aui-list-item-input">
+                <input id="address" type="text" value="" readonly="" />
+              </div>
+          </div>
+      </li>
+      <li class="aui-list-item">
+          <div class="aui-list-item-inner">
+              <div class="aui-list-item-label">详细地址：</div>
+              <div class="aui-list-item-input">
+                <input type="text" id="fulladdress" placeholder="请详细填写您的具体门牌号" value="" />
+              </div>
+          </div>
+      </li>
+    </ul>
+
+    <div class="aui-btn-group">
+      <a id="broadband-next" class="aui-btn aui-btn-warning aui-btn-block aui-btn-sm">立即办理</a>
+    </div>
+  </form>
+  <div class="aui-intro aui-margin-t-10">
+    <h3><span>地址说明</span></h3>
+    <p>1.请详细填写您的具体地址.例:**小区**幢**单元**层**户(室).</p>
+    <p>2.如您的安装地址为乡村,请填写您的门牌号或附近醒目地址.例:**商店附近等</p>
+    <p>3.如无法查询到您小区名称或乡村地址,则表示您暂时无法参与本次活动.</p>
+  </div>
+
+</div>
+<script type="text/javascript" src="./script/api.js"></script>
+<script type="text/javascript" src="./script/jquery-2.2.3.min.js"></script>
+<script>
+apiready = function(){
+    api.parseTapmode();
+}
+$('.aui-list .coverlist-item').click(function() {
+  var html = $(this).contents().find('.aui-list-item-text').html();
+  $('#coverList').hide();
+  $('#cellInfo').show();
+  $('#name').val(html);
+  $('#address').val(html);
+})
+$('#broadband-next').click(function(){
+  var fulladdress = $('#fulladdress').val();
+  if(fulladdress == '') {
+    alert('请细地址不能为空！')
+  } else {
+    $(location).attr('href','broadband-package.html');
+  }
+})
+</script>
+</body>
+</html>
